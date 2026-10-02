@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cybersecurity · McKenzie's Next Move</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥎</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,800&display=swap" rel="stylesheet"><style>
+:root{--bg:#F4EFFF;--surface:#FFFFFF;--ink:#231942;--muted:#5E5482;--line:#DCD0F7;--pink:#FF4F9A;--mint:#14B8A6;--sky:#5B6CFF;--butter:#FFD166;--chip:#EBE3FF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#16112B;--surface:#211A3D;--ink:#F2EEFF;--muted:#B4A9D9;--line:#3A3063;--pink:#FF6FAE;--mint:#2DD4BF;--sky:#8592FF;--butter:#FFD98A;--chip:#2C2350}}
+:root[data-theme="dark"]{--bg:#16112B;--surface:#211A3D;--ink:#F2EEFF;--muted:#B4A9D9;--line:#3A3063;--pink:#FF6FAE;--mint:#2DD4BF;--sky:#8592FF;--butter:#FFD98A;--chip:#2C2350}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--sky);text-underline-offset:3px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .inner{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;max-width:880px;margin:0 auto;scrollbar-width:none}
+nav.top .inner::-webkit-scrollbar{display:none}
+nav.top a{flex:none;text-decoration:none;color:var(--ink);font-weight:500;font-size:15px;padding:7px 14px;border-radius:999px;background:var(--chip)}
+nav.top a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+main{max-width:880px;margin:0 auto;padding:0 20px 80px}
+h1,h2,h3{line-height:1.1;margin:0}
+h1{font-size:clamp(40px,9vw,80px);font-weight:800;letter-spacing:-.035em;line-height:.98;margin-bottom:16px}
+h2{font-size:clamp(26px,5vw,38px);font-weight:800;letter-spacing:-.02em;margin:40px 0 10px}
+h3{font-size:20px;font-weight:600;margin-bottom:6px}
+p{max-width:68ch}
+.lede{color:var(--muted);font-size:18px;max-width:62ch;margin:0 0 22px}
+.hero{padding:40px 0 10px}
+.hey{font-size:18px;color:var(--muted);margin:0 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.btn{display:inline-block;border:0;border-radius:999px;padding:12px 20px;font-weight:600;cursor:pointer;background:var(--ink);color:var(--bg);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.tag{display:inline-block;font-size:14px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--chip);margin:0 6px 6px 0}
+.fine{font-size:14px;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.note p{margin:0}.note p+p{margin-top:8px}
+ul.clean{margin:6px 0 0;padding-left:20px}ul.clean li{margin-bottom:6px}
+footer{max-width:880px;margin:0 auto;padding:20px 20px 60px;color:var(--muted);font-size:14px}
+
+.phero{padding:36px 0 6px;border-bottom:8px solid var(--accent);margin-bottom:10px}
+.deg{color:var(--muted);font-size:18px;margin:0 0 10px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:16px 0}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.fact b{display:block;font-size:19px;line-height:1.2}.fact span{font-size:14px;color:var(--muted)}
+.match{display:none;margin:0 0 14px;padding:12px 16px;border-radius:14px;background:var(--ink);color:var(--bg);font-weight:600}
+.jobs{width:100%;border-collapse:collapse}
+.jobs td{padding:10px 0;border-bottom:1px dashed var(--line);vertical-align:top}
+.jobs td:last-child{text-align:right;color:var(--muted);font-size:15px;padding-left:12px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media (max-width:640px){.cols{grid-template-columns:1fr}}
+</style></head>
+<body><nav class="top" aria-label="Site"><div class="inner"><a href="index.html">Home</a><a href="quiz.html">Find your major</a><a href="majors.html">All majors</a><a href="compare.html">Cosmo vs college</a></div></nav><main>
+<header class="phero" style="--accent:var(--mint)">
+  <p class="hey">Associate (A.A.B.)</p>
+  <h1>Cybersecurity</h1>
+</header>
+<div class="match" id="match"></div>
+<div class="facts">
+  <div class="fact"><b>About 2 years</b><span>About 60 credits, full-time</span></div>
+  <div class="fact"><b>Trumbull</b><span>Where you'd take it</span></div>
+</div>
+<h2>What it is</h2>
+<p>Protecting computers and networks from hackers: security tools, network basics, and how attacks happen.</p>
+<div class="cols">
+  <div class="card"><h3>You might like it if…</h3><ul class="clean"><li>You like puzzles and figuring out how things break</li><li>You think hacking is interesting (the legal kind)</li><li>You want a tech job with purpose</li></ul></div>
+  <div class="card"><h3>Heads up</h3><ul class="clean"><li>Most people start in IT support before moving into security</li><li>Certifications like CompTIA Security+ help a lot</li></ul></div>
+</div>
+<h2>Jobs it can lead to</h2>
+<div class="card"><table class="jobs"><tr><td>IT support with security duties</td><td></td></tr><tr><td>Security operations (SOC) assistant</td><td></td></tr><tr><td>Help desk to security path</td><td></td></tr></table>
+<p class="fine" style="margin:12px 0 0">Pay shown only where we have real numbers. National medians include people with years of experience. <a href="https://www.indeed.com/jobs?q=cybersecurity+analyst&l=Warren%2C+OH&radius=50" target="_blank" rel="noopener">See real cybersecurity analyst job posts near Warren</a> to check starting pay.</p></div>
+<h2>How it fits you</h2>
+<div class="note"><p>Staying calm when something goes wrong is exactly what security incidents need.</p></div>
+<h2>What it costs</h2>
+<p>About $15,700 in tuition full-time before aid (4 semesters at the lower-division rate). Max Pell alone covers almost all of it.</p>
+<div class="btns">
+  <a class="btn" href="https://www.kent.edu/node/986040" target="_blank" rel="noopener">See the full program at Kent</a>
+  <a class="btn ghost" href="quiz.html#results">Back to my matches</a>
+  <a class="btn ghost" href="majors.html">All majors</a>
+</div></main>
+<footer><p>Made for McKenzie. Program details come from Kent State's Trumbull degrees page and program pages, fall 2026. Programs change, so confirm with a Trumbull advisor: 330-675-8860.</p></footer>
+<script>try{const m=JSON.parse(localStorage.getItem("mk_matches")||"{}");const v=m["cyber-aab"];if(v!==undefined){const el=document.getElementById("match");el.textContent="Your quiz match: "+v+"%";el.style.display="block";}}catch(e){}</script></body></html>

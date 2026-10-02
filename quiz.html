@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Find your major · McKenzie's Next Move</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥎</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,800&display=swap" rel="stylesheet"><style>
+:root{--bg:#F4EFFF;--surface:#FFFFFF;--ink:#231942;--muted:#5E5482;--line:#DCD0F7;--pink:#FF4F9A;--mint:#14B8A6;--sky:#5B6CFF;--butter:#FFD166;--chip:#EBE3FF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#16112B;--surface:#211A3D;--ink:#F2EEFF;--muted:#B4A9D9;--line:#3A3063;--pink:#FF6FAE;--mint:#2DD4BF;--sky:#8592FF;--butter:#FFD98A;--chip:#2C2350}}
+:root[data-theme="dark"]{--bg:#16112B;--surface:#211A3D;--ink:#F2EEFF;--muted:#B4A9D9;--line:#3A3063;--pink:#FF6FAE;--mint:#2DD4BF;--sky:#8592FF;--butter:#FFD98A;--chip:#2C2350}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--sky);text-underline-offset:3px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .inner{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;max-width:880px;margin:0 auto;scrollbar-width:none}
+nav.top .inner::-webkit-scrollbar{display:none}
+nav.top a{flex:none;text-decoration:none;color:var(--ink);font-weight:500;font-size:15px;padding:7px 14px;border-radius:999px;background:var(--chip)}
+nav.top a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+main{max-width:880px;margin:0 auto;padding:0 20px 80px}
+h1,h2,h3{line-height:1.1;margin:0}
+h1{font-size:clamp(40px,9vw,80px);font-weight:800;letter-spacing:-.035em;line-height:.98;margin-bottom:16px}
+h2{font-size:clamp(26px,5vw,38px);font-weight:800;letter-spacing:-.02em;margin:40px 0 10px}
+h3{font-size:20px;font-weight:600;margin-bottom:6px}
+p{max-width:68ch}
+.lede{color:var(--muted);font-size:18px;max-width:62ch;margin:0 0 22px}
+.hero{padding:40px 0 10px}
+.hey{font-size:18px;color:var(--muted);margin:0 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.btn{display:inline-block;border:0;border-radius:999px;padding:12px 20px;font-weight:600;cursor:pointer;background:var(--ink);color:var(--bg);text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.tag{display:inline-block;font-size:14px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--chip);margin:0 6px 6px 0}
+.fine{font-size:14px;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.note p{margin:0}.note p+p{margin-top:8px}
+ul.clean{margin:6px 0 0;padding-left:20px}ul.clean li{margin-bottom:6px}
+footer{max-width:880px;margin:0 auto;padding:20px 20px 60px;color:var(--muted);font-size:14px}
+
+.qwrap{max-width:640px}
+.bar{height:10px;border-radius:999px;background:var(--chip);overflow:hidden;margin:6px 0 20px}
+.bar span{display:block;height:100%;background:var(--pink);transition:width .3s}
+.qopt{display:block;width:100%;text-align:left;background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:14px 16px;margin-bottom:10px;cursor:pointer;font-size:17px}
+.qopt:hover{border-color:var(--ink)}
+.res{display:block;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-left:10px solid var(--accent);border-radius:20px;padding:18px;margin-bottom:12px}
+.res:hover{border-color:var(--ink)}
+.res .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.res .pct{font-size:30px;font-weight:800}
+.res .d{font-size:14px;color:var(--muted)}
+.res .why{margin:8px 0 0;font-size:16px}
+.small{display:flex;flex-wrap:wrap;gap:8px}
+.small a{text-decoration:none;color:var(--ink);background:var(--chip);border-radius:999px;padding:8px 14px;font-weight:600;font-size:15px}
+</style></head>
+<body><nav class="top" aria-label="Site"><div class="inner"><a href="index.html">Home</a><a href="quiz.html" aria-current="page">Find your major</a><a href="majors.html">All majors</a><a href="compare.html">Cosmo vs college</a></div></nav><main><header class="hero"><p class="hey">10 quick questions</p><h1>Find your major</h1>
+<p class="lede">Not feeling cosmetology or IT? No problem. Answer honestly and this will point you to the Trumbull majors that fit you best. Tap any match to learn more.</p></header>
+<div class="qwrap" id="quiz"></div>
+<section id="results" hidden></section></main>
+<footer><p>Made for McKenzie. Program details come from Kent State's Trumbull degrees page and program pages, fall 2026. Programs change, so confirm with a Trumbull advisor: 330-675-8860.</p></footer>
+<script>const Q=[["Pick the class you'd actually look forward to", [["Psychology", {"help": 2, "people": 1}], ["Business or economics", {"lead": 2, "numbers": 1}], ["Computers or coding", {"tech": 2}], ["Art, theatre, or writing", {"create": 2, "words": 1}], ["Biology or anatomy", {"health": 2, "animals": 1}], ["Shop class, building stuff", {"build": 2}]]], ["Friends come to you when they need\u2026", [["Someone to listen and give advice", {"help": 2, "people": 1}], ["Someone to plan it and tell everyone what to do", {"lead": 2}], ["Their phone or laptop fixed", {"tech": 2}], ["Something written, designed, or styled", {"create": 2, "words": 1}], ["Someone calm in a crisis", {"health": 1, "justice": 1, "lead": 1}]]], ["Which day sounds best?", [["Working with animals", {"animals": 3}], ["Helping patients feel better", {"health": 2, "help": 1}], ["Solving a case", {"justice": 2, "words": 1}], ["Building or fixing a machine", {"build": 2, "tech": 1}], ["Running the numbers on a budget", {"numbers": 2, "lead": 1}], ["Putting on a show or event", {"create": 2, "people": 1}]]], ["Your ideal workspace", [["On my feet and moving around", {"health": 1, "animals": 1, "justice": 1, "build": 1}], ["At a desk with a clear plan", {"numbers": 1, "tech": 1, "lead": 1}], ["Around people all day", {"people": 2, "help": 1}], ["Somewhere creative", {"create": 2}]]], ["You and math", [["We're good", {"numbers": 2, "tech": 1, "build": 1, "health": 1}], ["It's okay, I can push through", {"numbers": 1}], ["I'd avoid it if I could", {"words": 1, "create": 1, "people": 1, "numbers": -2, "build": -1, "tech": -1}]]], ["What matters most in a job?", [["Helping people", {"help": 2, "health": 1}], ["Good money", {"numbers": 1, "tech": 1, "lead": 1, "health": 1}], ["Being creative", {"create": 2}], ["Steady, predictable hours", {"numbers": 1, "tech": 1, "build": 1}], ["Action and excitement", {"justice": 2, "health": 1}]]], ["When things get stressful, you\u2026", [["Stay calm and take charge", {"lead": 2, "health": 1, "justice": 1}], ["Fix the actual problem", {"tech": 1, "build": 1, "numbers": 1}], ["Help people through it", {"help": 2, "people": 1}], ["Would rather avoid the drama", {"create": 1, "words": 1, "numbers": 1}]]], ["How do you want to use your ASL?", [["As a big part of my career", {"help": 1, "people": 2, "asl": 3}], ["As a bonus skill", {"asl": 1}], ["Not sure yet", {}]]], ["How long do you want to be in school?", [["About 2 years, then work", {"two": 3}], ["4 years is fine", {"four": 3}], ["Not sure", {}]]], ["Online or in person?", [["In person", {"inperson": 2}], ["Online works for me", {"online": 2}], ["Either", {}]]]];const P=[{"id": "business-bba", "name": "Business Management", "deg": "Bachelor's (B.B.A.)", "lvl": "B", "where": "In person at Trumbull", "color": "sky", "tags": {"lead": 3, "people": 2, "numbers": 1}}, {"id": "it-bsit", "name": "Information Technology", "deg": "Bachelor's (B.S.I.T.)", "lvl": "B", "where": "Fully online", "color": "mint", "tags": {"tech": 3, "numbers": 1, "lead": 1}}, {"id": "comm-ba", "name": "Communication Studies", "deg": "Bachelor's (B.A.)", "lvl": "B", "where": "Applied Communication concentration at Trumbull, or fully online", "color": "pink", "tags": {"people": 3, "words": 2, "create": 2, "lead": 1}}, {"id": "crim-ba", "name": "Criminology & Justice Studies", "deg": "Bachelor's (B.A.)", "lvl": "B", "where": "Trumbull", "color": "sky", "tags": {"justice": 3, "help": 1, "people": 1, "words": 1}}, {"id": "english-ba", "name": "English", "deg": "Bachelor's (B.A.)", "lvl": "B", "where": "Trumbull", "color": "pink", "tags": {"words": 3, "create": 2}}, {"id": "bis", "name": "Integrative Studies", "deg": "Bachelor's (B.I.S.)", "lvl": "B", "where": "Trumbull", "color": "butter", "tags": {"lead": 1, "people": 1, "create": 1, "words": 1, "help": 1}}, {"id": "nursing", "name": "Nursing", "deg": "Bachelor's (B.S.N.)", "lvl": "B", "where": "Trumbull (check admission details)", "color": "mint", "tags": {"health": 3, "help": 3, "people": 1, "numbers": 1}}, {"id": "psych-ba", "name": "Psychology", "deg": "Bachelor's (B.A.)", "lvl": "B", "where": "Trumbull", "color": "pink", "tags": {"help": 3, "people": 2, "words": 1}}, {"id": "btas", "name": "Technical & Applied Studies", "deg": "Bachelor's (B.T.A.S.)", "lvl": "B", "where": "Trumbull", "color": "butter", "tags": {"tech": 1, "build": 1, "lead": 1}}, {"id": "theatre-ba", "name": "Theatre Studies", "deg": "Bachelor's (B.A.)", "lvl": "B", "where": "Trumbull (Kent Trumbull Theatre)", "color": "pink", "tags": {"create": 3, "people": 1, "words": 1}}, {"id": "acct-aab", "name": "Accounting", "deg": "Associate (A.A.B.)", "lvl": "A", "where": "Trumbull", "color": "sky", "tags": {"numbers": 3, "lead": 1}}, {"id": "bman-aab", "name": "Business Management", "deg": "Associate (A.A.B.)", "lvl": "A", "where": "Trumbull", "color": "sky", "tags": {"lead": 3, "people": 1, "numbers": 1}}, {"id": "cyber-aab", "name": "Cybersecurity", "deg": "Associate (A.A.B.)", "lvl": "A", "where": "Trumbull", "color": "mint", "tags": {"tech": 3, "justice": 1}}, {"id": "it-aab", "name": "Information Technology", "deg": "Associate (A.A.B.)", "lvl": "A", "where": "Trumbull", "color": "mint", "tags": {"tech": 3}}, {"id": "office-aab", "name": "Office Technology", "deg": "Associate (A.A.B.)", "lvl": "A", "where": "Trumbull, with an online medical billing option", "color": "butter", "tags": {"lead": 1, "tech": 1, "words": 1, "numbers": 1, "health": 1}}, {"id": "crim-aas", "name": "Criminology & Justice Studies", "deg": "Associate (A.A.S.)", "lvl": "A", "where": "Trumbull, with a Police Academy option", "color": "sky", "tags": {"justice": 3, "help": 1}}, {"id": "eet-aas", "name": "Electrical/Electronic Engineering Technology", "deg": "Associate (A.A.S.)", "lvl": "A", "where": "Trumbull", "color": "mint", "tags": {"build": 3, "tech": 2, "numbers": 1}}, {"id": "met-aas", "name": "Mechanical Engineering Technology", "deg": "Associate (A.A.S.)", "lvl": "A", "where": "Trumbull", "color": "mint", "tags": {"build": 3, "numbers": 2, "tech": 1}}, {"id": "vettech-aas", "name": "Veterinary Technology", "deg": "Associate (A.A.S.)", "lvl": "A", "where": "Trumbull", "color": "pink", "tags": {"animals": 3, "health": 2, "help": 1}}, {"id": "aa-as", "name": "Associate of Arts or Science", "deg": "Associate (A.A. / A.S.)", "lvl": "A", "where": "Trumbull", "color": "butter", "tags": {"words": 1, "people": 1, "numbers": 1}}];
+const COL={sky:"var(--sky)",mint:"var(--mint)",pink:"var(--pink)",butter:"var(--butter)"};
+const LBL={help:"helping people",people:"working with people",lead:"organizing and leading",numbers:"numbers",tech:"tech",build:"hands-on building",create:"creativity",words:"reading and writing",health:"health care",animals:"animals",justice:"justice and safety"};
+let ans=[];try{ans=JSON.parse(localStorage.getItem("mk_quizans")||"[]")}catch(e){}
+const qEl=document.getElementById("quiz"),rEl=document.getElementById("results");
+function show(i){
+  if(i>=Q.length){results();return;}
+  rEl.hidden=true;qEl.hidden=false;
+  const [q,opts]=Q[i];
+  qEl.innerHTML=`<p class="fine">Question ${i+1} of ${Q.length}</p><div class="bar"><span style="width:${i/Q.length*100}%"></span></div><h2 style="margin-top:0">${q}</h2>`+
+   opts.map((o,j)=>`<button class="qopt" data-j="${j}">${o[0]}</button>`).join("")+
+   (i>0?`<button class="btn ghost" id="back" style="margin-top:6px">Back</button>`:"");
+  qEl.querySelectorAll(".qopt").forEach(b=>b.addEventListener("click",()=>{ans[i]=+b.dataset.j;ans.length=i+1;try{localStorage.setItem("mk_quizans",JSON.stringify(ans))}catch(e){}show(i+1);window.scrollTo(0,0);}));
+  const bk=document.getElementById("back");if(bk)bk.addEventListener("click",()=>show(i-1));
+}
+function results(){
+  const u={};ans.forEach((a,i)=>{const w=Q[i][1][a][1];for(const k in w)u[k]=(u[k]||0)+w[k];});
+  const IK=Object.keys(LBL);const un=Math.sqrt(IK.reduce((t,k)=>t+Math.max(0,u[k]||0)**2,0))||1;
+  const scored=P.map(p=>{let s=0,pn=0;for(const k in p.tags){s+=(u[k]||0)*p.tags[k];pn+=p.tags[k]**2;}
+    let pct=s/(un*Math.sqrt(pn));
+    if(p.lvl==="A")pct+=(u.two||0)*0.03-(u.four||0)*0.02; else pct+=(u.four||0)*0.03-(u.two||0)*0.02;
+    const online=p.where.startsWith("Fully online");
+    if(online)pct+=(u.online||0)*0.03-(u.inperson||0)*0.05;
+    if(u.asl>=3&&["bis","comm-ba","psych-ba"].includes(p.id))pct+=0.06;
+    if(p.id==="aa-as")pct=Math.min(pct,0.5);
+    const why=Object.keys(p.tags).filter(k=>(u[k]||0)>=2).sort((a,b)=>(u[b]||0)*p.tags[b]-(u[a]||0)*p.tags[a]).slice(0,2).map(k=>LBL[k]);
+    return {...p,raw:pct,why};});
+  const top=Math.max(...scored.map(s=>s.raw),0.01);
+  scored.forEach(s=>s.pct=Math.max(5,Math.round(Math.min(1,s.raw/top)*95)));
+  scored.sort((a,b)=>b.pct-a.pct);
+  const m={};scored.forEach(s=>m[s.id]=s.pct);try{localStorage.setItem("mk_matches",JSON.stringify(m))}catch(e){}
+  const card=s=>`<a class="res" href="major-${s.id}.html" style="--accent:${COL[s.color]}"><div class="top"><div><h3>${s.name}</h3><div class="d">${s.deg} · ${s.where}</div></div><div class="pct">${s.pct}%</div></div>${s.why.length?`<p class="why">Fits your interest in ${s.why.join(" and ")}.</p>`:""}</a>`;
+  let extra="";
+  if((u.create||0)>=3&&(u.people||0)>=2)extra=`<div class="note" style="margin:6px 0 16px"><p>Your answers lean creative and people-focused. Cosmetology is still a real option, and so is theatre hair and makeup. <a href="compare.html">Compare cosmetology with college</a>.</p></div>`;
+  rEl.innerHTML=`<h2 style="margin-top:20px">Your top matches</h2><p class="lede">These are starting points, not a verdict. Open one, see how it feels, then come back and try another.</p>${extra}${scored.slice(0,3).map(card).join("")}
+   <h3 style="margin-top:22px">Also worth a look</h3><div class="small">${scored.slice(3,7).map(s=>`<a href="major-${s.id}.html">${s.name} · ${s.pct}%</a>`).join("")}</div>
+   <div class="btns"><a class="btn" href="majors.html">See all majors with your scores</a><button class="btn ghost" id="redo">Retake the quiz</button></div>`;
+  qEl.hidden=true;rEl.hidden=false;
+  document.getElementById("redo").addEventListener("click",()=>{ans=[];try{localStorage.removeItem("mk_quizans")}catch(e){}show(0);});
+}
+if(ans.length>=Q.length)results();else show(Math.min(ans.length,Q.length-1)>0?ans.length:0);
+if(location.hash==="#results"&&ans.length>=Q.length)rEl.scrollIntoView();</script></body></html>
