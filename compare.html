@@ -1,1034 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>McKenzie's Next Move</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#F4EFFF; --surface:#FFFFFF; --ink:#231942; --muted:#5E5482; --line:#DCD0F7;
-  --pink:#FF4F9A; --mint:#14B8A6; --sky:#5B6CFF; --butter:#FFD166; --chip:#EBE3FF;
-  --c-cosmo:var(--pink); --c-biz:var(--sky); --c-it:var(--mint);
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#16112B; --surface:#211A3D; --ink:#F2EEFF; --muted:#B4A9D9; --line:#3A3063;
-    --pink:#FF6FAE; --mint:#2DD4BF; --sky:#8592FF; --butter:#FFD98A; --chip:#2C2350;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#16112B; --surface:#211A3D; --ink:#F2EEFF; --muted:#B4A9D9; --line:#3A3063;
-  --pink:#FF6FAE; --mint:#2DD4BF; --sky:#8592FF; --butter:#FFD98A; --chip:#2C2350;
-}
+<title>Compare · McKenzie's Next Move</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,800&display=swap" rel="stylesheet"><style>
+:root{--bg:#F4EFFF;--surface:#FFFFFF;--ink:#231942;--muted:#5E5482;--line:#DCD0F7;--pink:#FF4F9A;--mint:#14B8A6;--sky:#5B6CFF;--butter:#FFD166;--chip:#EBE3FF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#16112B;--surface:#211A3D;--ink:#F2EEFF;--muted:#B4A9D9;--line:#3A3063;--pink:#FF6FAE;--mint:#2DD4BF;--sky:#8592FF;--butter:#FFD98A;--chip:#2C2350}}
+:root[data-theme="dark"]{--bg:#16112B;--surface:#211A3D;--ink:#F2EEFF;--muted:#B4A9D9;--line:#3A3063;--pink:#FF6FAE;--mint:#2DD4BF;--sky:#8592FF;--butter:#FFD98A;--chip:#2C2350}
 *,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
-img{max-width:100%}
 a{color:var(--sky);text-underline-offset:3px}
 button{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
-
-/* nav */
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav.top .inner{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;max-width:880px;margin:0 auto;scrollbar-width:none}
 nav.top .inner::-webkit-scrollbar{display:none}
 nav.top a{flex:none;text-decoration:none;color:var(--ink);font-weight:500;font-size:15px;padding:7px 14px;border-radius:999px;background:var(--chip)}
-nav.top a:hover{background:var(--line)}
-
+nav.top a[aria-current="page"]{background:var(--ink);color:var(--bg)}
 main{max-width:880px;margin:0 auto;padding:0 20px 80px}
-section{padding:56px 0 8px}
 h1,h2,h3{line-height:1.1;margin:0}
-h2{font-size:clamp(30px,6vw,44px);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
-h3{font-size:21px;font-weight:600;margin-bottom:6px}
-.lede{color:var(--muted);font-size:18px;max-width:62ch;margin:0 0 24px}
+h1{font-size:clamp(40px,9vw,80px);font-weight:800;letter-spacing:-.035em;line-height:.98;margin-bottom:16px}
+h2{font-size:clamp(26px,5vw,38px);font-weight:800;letter-spacing:-.02em;margin:40px 0 10px}
+h3{font-size:20px;font-weight:600;margin-bottom:6px}
 p{max-width:68ch}
-
-/* hero */
-.hero{padding:44px 0 16px}
-.hero .hey{font-size:18px;color:var(--muted);margin:0 0 8px}
-.hero h1{font-size:clamp(46px,11vw,96px);font-weight:800;letter-spacing:-.035em;line-height:.95;margin-bottom:22px}
-.doors{display:flex;flex-wrap:wrap;gap:14px;margin:8px 0 26px}
-.door{display:block;text-decoration:none;color:#fff;font-weight:800;font-size:clamp(20px,4.4vw,28px);padding:16px 22px;border-radius:20px;box-shadow:0 6px 0 0 color-mix(in srgb,var(--ink) 80%,transparent);transition:transform .15s}
-.door small{display:block;font-weight:500;font-size:14px;opacity:.92}
-.door:hover{transform:translateY(-3px) rotate(0deg)!important}
-.door.c{background:var(--c-cosmo);transform:rotate(-2.5deg)}
-.door.b{background:var(--c-biz);transform:rotate(1.5deg)}
-.door.i{background:var(--c-it);transform:rotate(-1deg)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .door{color:#16112B}}
-:root[data-theme="dark"] .door{color:#16112B}
-.note{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;max-width:640px}
-.note p{margin:0}
-.note p+p{margin-top:8px}
-
-/* quiz */
-.q{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px;margin-bottom:14px}
-.q .num{font-size:14px;color:var(--muted);margin-bottom:4px}
-.q h3{margin-bottom:12px}
-.opts{display:grid;gap:8px}
-.opt{text-align:left;background:var(--bg);border:2px solid transparent;border-radius:14px;padding:12px 14px;cursor:pointer;font-size:16px}
-.opt:hover{border-color:var(--line)}
-.opt[aria-pressed="true"]{border-color:var(--ink);background:var(--chip);font-weight:600}
-.results{background:var(--ink);color:var(--bg);border-radius:24px;padding:24px;margin-top:18px}
-.results h3{font-size:26px;margin-bottom:14px}
-.bar{margin:12px 0}
-.bar .lbl{display:flex;justify-content:space-between;font-weight:600;margin-bottom:5px}
-.bar .track{height:14px;border-radius:999px;background:color-mix(in srgb,var(--bg) 20%,transparent);overflow:hidden}
-.bar .fill{height:100%;border-radius:999px;width:0;transition:width .6s cubic-bezier(.2,.8,.2,1)}
-.results p{color:color-mix(in srgb,var(--bg) 85%,transparent);margin:14px 0 0}
-.progress{font-size:15px;color:var(--muted);margin:6px 0 16px}
+.lede{color:var(--muted);font-size:18px;max-width:62ch;margin:0 0 22px}
+.hero{padding:40px 0 10px}
+.hey{font-size:18px;color:var(--muted);margin:0 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
 .btn{display:inline-block;border:0;border-radius:999px;padding:12px 20px;font-weight:600;cursor:pointer;background:var(--ink);color:var(--bg);text-decoration:none}
 .btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
-
-/* path tabs */
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
-.tab{border:2px solid var(--ink);background:transparent;border-radius:999px;padding:9px 16px;font-weight:600;cursor:pointer}
-.tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px;border-top:8px solid var(--accent)}
-.panel .tag{display:inline-block;font-size:14px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--chip);margin:0 6px 6px 0}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:18px 0}
-.fact{background:var(--bg);border-radius:14px;padding:12px 14px}
-.fact b{display:block;font-size:22px;line-height:1.15}
-.fact span{font-size:14px;color:var(--muted)}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
-@media (max-width:620px){.cols{grid-template-columns:1fr}}
-.cols ul{margin:6px 0 0;padding-left:20px}
-.cols li{margin-bottom:6px}
-.ladder{margin-top:20px}
-.ladder ol{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px}
-.ladder li{display:flex;gap:12px;align-items:baseline;padding:8px 12px;border-radius:12px;background:var(--bg)}
-.ladder li .yr{flex:none;width:76px;font-weight:600;color:var(--muted);font-size:14px}
-
-/* money */
-.sim{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:20px}
-.ctrls{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-bottom:16px}
-.ctrl-group{border-radius:16px;padding:14px;background:var(--bg)}
-.ctrl-group h3{font-size:17px;display:flex;align-items:center;gap:8px}
-.dot{width:12px;height:12px;border-radius:50%;display:inline-block;flex:none}
-.ctrl{margin-top:10px}
-.ctrl label{display:flex;justify-content:space-between;font-size:14px;color:var(--muted)}
-.ctrl output{color:var(--ink);font-weight:600}
-input[type=range]{width:100%;accent-color:var(--ink)}
-.chartwrap{overflow-x:auto}
-svg.chart{display:block;width:100%;min-width:520px;height:auto}
-.toggle{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
-.readout{margin-top:12px;font-size:16px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.tag{display:inline-block;font-size:14px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--chip);margin:0 6px 6px 0}
 .fine{font-size:14px;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.note p{margin:0}.note p+p{margin-top:8px}
+ul.clean{margin:6px 0 0;padding-left:20px}ul.clean li{margin-bottom:6px}
+footer{max-width:880px;margin:0 auto;padding:20px 20px 60px;color:var(--muted);font-size:14px}
 
-/* cost */
-.costgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media (max-width:680px){.costgrid{grid-template-columns:1fr}}
-.costcard{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:20px;border-top:8px solid var(--accent)}
-.costcard .where{color:var(--muted);font-size:15px;margin:2px 0 14px}
-.row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:16px}
-.row:last-of-type{border-bottom:0}
-.row b{white-space:nowrap}
-.row.minus b{color:var(--mint)}
-.bottom{margin-top:12px;padding:14px;border-radius:14px;background:var(--bg)}
-.bottom .big{font-size:32px;font-weight:800;line-height:1.05;display:block}
-.bottom .sub{font-size:14px;color:var(--muted)}
-.timeline{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:20px;margin-top:14px}
-.tl{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:center;margin:10px 0}
-.tl .lane{position:relative;height:30px;background:var(--bg);border-radius:999px;overflow:hidden}
-.tl .seg{position:absolute;top:0;bottom:0;border-radius:999px;display:flex;align-items:center;padding:0 10px;font-size:13px;font-weight:600;color:#fff;white-space:nowrap}
-.tl .seg.work{background:repeating-linear-gradient(135deg,var(--accent) 0 8px,color-mix(in srgb,var(--accent) 70%,transparent) 8px 16px)}
-.tlaxis{display:grid;grid-template-columns:110px repeat(6,1fr);font-size:13px;color:var(--muted)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tl .seg{color:#16112B}}
-:root[data-theme="dark"] .tl .seg{color:#16112B}
-
-/* study */
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
-.chip{border:2px solid var(--ink);background:transparent;border-radius:999px;padding:8px 14px;font-weight:600;cursor:pointer;font-size:15px}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-.studyout{display:grid;gap:12px;margin-top:14px}
-.subj{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px;border-left:8px solid var(--accent)}
-.subj .hrs{font-size:14px;color:var(--muted);margin:2px 0 8px}
-.subj ol{margin:6px 0 0;padding-left:22px}
-.subj li{margin-bottom:6px}
-.subj .done{margin-top:10px;padding:10px 12px;border-radius:12px;background:var(--bg);font-size:15px}
-
-/* routes */
-.routes{display:grid;gap:14px}
-.route{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px}
-.route.flag{border:2px solid var(--pink)}
-.route .verdict{display:inline-block;font-size:14px;font-weight:600;padding:4px 10px;border-radius:999px;margin-bottom:8px}
-.v-good{background:color-mix(in srgb,var(--mint) 22%,transparent)}
-.v-meh{background:color-mix(in srgb,var(--butter) 45%,transparent)}
-.v-careful{background:color-mix(in srgb,var(--pink) 22%,transparent)}
-.route ul{margin:8px 0 0;padding-left:20px}
-.route li{margin-bottom:5px}
-
-/* readiness check */
-.check{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px;margin-top:18px}
-.check label{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line);cursor:pointer}
-.check label:last-of-type{border-bottom:0}
-.check input{width:20px;height:20px;margin-top:3px;accent-color:var(--ink);flex:none}
-#readyOut{margin-top:12px;font-weight:600}
-
-/* softball table */
-.tablewrap{overflow-x:auto;border-radius:16px;border:1px solid var(--line);background:var(--surface)}
-table{border-collapse:collapse;width:100%;min-width:560px;font-size:16px}
-th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-weight:600;background:var(--chip)}
-tr:last-child td{border-bottom:0}
-
-/* combos */
-.combos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.combo{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px}
-.combo .mix{display:flex;gap:6px;margin-bottom:10px}
-
-/* plan */
-.todo{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:8px 18px}
-.todo label{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);cursor:pointer;align-items:flex-start}
-.todo label:last-child{border-bottom:0}
-.todo input{width:20px;height:20px;margin-top:3px;accent-color:var(--mint);flex:none}
-.todo input:checked + span{text-decoration:line-through;color:var(--muted)}
-.todo span small{display:block;color:var(--muted);font-size:14px}
-textarea{width:100%;min-height:130px;border-radius:16px;border:2px solid var(--line);background:var(--surface);color:var(--ink);padding:14px;font:inherit;font-size:16px;resize:vertical}
-textarea:focus{outline:none;border-color:var(--ink)}
-.saved{font-size:14px;color:var(--muted);min-height:20px;margin-top:6px}
-footer{max-width:880px;margin:0 auto;padding:30px 20px 60px;color:var(--muted);font-size:14px}
-footer p{max-width:72ch}
-</style>
-</head>
-<body>
-
-<nav class="top" aria-label="Sections">
-  <div class="inner">
-    <a href="index.html">← Home</a>
-    <a href="quiz.html">Find your major</a>
-    <a href="#start">Start</a>
-    <a href="#quiz">Vibe check</a>
-    <a href="#paths">The paths</a>
-    <a href="#cost">Cost &amp; time</a>
-    <a href="#money">Money</a>
-    <a href="#getin">Getting in</a>
-    <a href="#study">Study plan</a>
-    <a href="#asl">ASL</a>
-    <a href="#softball">Softball</a>
-    <a href="#experiences">Beyond money</a>
-    <a href="#combos">Mix &amp; match</a>
-    <a href="#plan">Your plan</a>
-  </div>
-</nav>
-
-<main>
-  <header class="hero" id="start">
-    <p class="hey">Hey McKenzie 👋</p>
-    <h1>Three doors.<br>Your call.</h1>
-    <div class="doors">
-      <a class="door c" href="#paths" data-open="cosmo">Cosmetology<small>License in about a year</small></a>
-      <a class="door b" href="#paths" data-open="biz">Business Management<small>Kent State Trumbull BBA</small></a>
-      <a class="door i" href="#paths" data-open="it">Information Technology<small>Kent State BSIT</small></a>
-    </div>
-    <div class="note">
-      <p>This isn't here to pick for you. It lays out the real tradeoffs (time, money, school, softball) so you can make the call with your eyes open. It's your decision.</p>
-      <p>Not into cosmetology or IT? <a href="quiz.html">Take the 10-question major quiz</a> or <a href="majors.html">browse every Trumbull major</a>.</p>
-      <p>Heads up: I work at a college, so I might be a little biased. Push back on anything that feels off, and double-check the numbers with the actual schools.</p>
-    </div>
-  </header>
-
-  <!-- QUIZ -->
-  <section id="quiz">
-    <h2>Vibe check</h2>
-    <p class="lede">Eight quick ones. No wrong answers. It's a mirror, not a verdict.</p>
-    <div id="quizBox"></div>
-    <p class="progress" id="quizProgress"></p>
-    <div class="results" id="results" hidden>
-      <h3>Here's what your answers lean toward</h3>
-      <div class="bar"><div class="lbl"><span>Cosmetology</span><span id="pc">0%</span></div><div class="track"><div class="fill" id="fc" style="background:var(--c-cosmo)"></div></div></div>
-      <div class="bar"><div class="lbl"><span>Business Management</span><span id="pb">0%</span></div><div class="track"><div class="fill" id="fb" style="background:var(--c-biz)"></div></div></div>
-      <div class="bar"><div class="lbl"><span>Information Technology</span><span id="pi">0%</span></div><div class="track"><div class="fill" id="fi" style="background:var(--c-it)"></div></div></div>
-      <p id="resultText"></p>
-      <p><button class="btn ghost" id="resetQuiz" style="color:var(--bg);border-color:var(--bg)">Retake it</button></p>
-    </div>
-  </section>
-
-  <!-- PATHS -->
-  <section id="paths">
-    <h2>The paths, for real</h2>
-    <p class="lede">What each one actually looks like day to day, what it costs, and where it can go.</p>
-    <div class="tabs" role="tablist">
-      <button class="tab" role="tab" aria-selected="true" data-tab="cosmo">Cosmetology</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="biz">Business Mgmt</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="it">IT</button>
-    </div>
-
-    <div class="panel" role="tabpanel" id="tab-cosmo" style="--accent:var(--c-cosmo)">
-      <h3>Cosmetology license</h3>
-      <span class="tag">Hands-on</span><span class="tag">Fast start</span><span class="tag">People all day</span>
-      <div class="facts">
-        <div class="fact"><b>1,500 hrs</b><span>Training Ohio requires before the state board exam</span></div>
-        <div class="fact"><b>~1 year</b><span>Full-time; longer on evening schedules</span></div>
-        <div class="fact"><b>$16,500</b><span>Tuition at Raphael's in Niles, before kit &amp; books</span></div>
-        <div class="fact"><b>$13.34/hr</b><span>Median stylist pay in the Youngstown–Warren area (2022, before tips)</span></div>
-      </div>
-      <div class="cols">
-        <div><h3>Why it's tempting</h3><ul>
-          <li>You're earning in about a year, not four.</li>
-          <li>Creative work, and you see results the same day.</li>
-          <li>Tips add roughly 10–25% on top of wages. Top stylists nationally make about $71k, and owning a salon can go higher.</li>
-          <li>Pell can be used at accredited cosmetology schools too, so ask each school.</li>
-        </ul></div>
-        <div><h3>What to watch</h3><ul>
-          <li>The bottom 10% make around $27k. Building a client list takes years.</li>
-          <li>Commission splits or booth rent come out of what you earn. Ask salons exactly how they pay.</li>
-          <li>Local pay runs below the national median ($35,790). The Youngstown–Warren median was lower than every big Ohio metro in Raphael's own data.</li>
-          <li>On your feet all day, nights and Saturdays are prime time.</li>
-          <li>Many schools cost more than one year of Pell covers.</li>
-        </ul></div>
-      </div>
-      <div class="ladder"><h3>A possible ladder</h3><ol>
-        <li><span class="yr">Year 1</span>School + state board exam</li>
-        <li><span class="yr">Years 2–4</span>Assistant or new stylist, building clients</li>
-        <li><span class="yr">Years 4–7</span>Established stylist, maybe a specialty (color, extensions, lashes)</li>
-        <li><span class="yr">Later</span>Booth rental, educator, manager, or your own salon (which is where business skills come in)</li>
-      </ol></div>
-    </div>
-
-    <div class="panel" role="tabpanel" id="tab-biz" style="--accent:var(--c-biz)" hidden>
-      <h3>Business Management, B.B.A. (Kent State Trumbull)</h3>
-      <span class="tag">In person at Trumbull</span><span class="tag">Leading people</span><span class="tag">Project mgmt built in</span>
-      <div class="facts">
-        <div class="fact"><b>120 credits</b><span>About 4 years full-time</span></div>
-        <div class="fact"><b>In person</b><span>Offered on the Trumbull campus in Warren</span></div>
-        <div class="fact"><b>$7,395</b><span>Max Pell Grant for 2026–27</span></div>
-        <div class="fact"><b>$100,750</b><span>Median pay, project management specialists (BLS, per Kent State)</span></div>
-      </div>
-      <div class="cols">
-        <div><h3>Why it fits you</h3><ul>
-          <li>Includes Strategic Project Management, Leadership, HR, and a hands-on consulting practicum.</li>
-          <li>Your strengths (analyzing, delegating, staying calm under pressure) are literally the job.</li>
-          <li>Opens doors everywhere: hospitals, manufacturing, schools, retail, even running a salon.</li>
-          <li>Option to start an MBA early and double-count 9 credits.</li>
-        </ul></div>
-        <div><h3>What to watch</h3><ul>
-          <li>Four years before the full-time paycheck.</li>
-          <li>Needs a C or better in Algebra for Calculus (MATH 11010) to keep going in the major. Math prep matters.</li>
-          <li>"Project manager" usually isn't an entry-level title. Most people start as coordinator, analyst, or assistant.</li>
-          <li>That $100k median is for experienced people, not new grads.</li>
-        </ul></div>
-      </div>
-      <div class="ladder"><h3>A possible ladder</h3><ol>
-        <li><span class="yr">Years 1–4</span>Classes + part-time job + internship. Get the CAPM cert near the end.</li>
-        <li><span class="yr">Years 4–6</span>Project coordinator, operations assistant, or business analyst</li>
-        <li><span class="yr">Years 6–9</span>Project manager or team lead. PMP cert once you have the experience.</li>
-        <li><span class="yr">Later</span>Senior PM, operations manager, director, or your own business</li>
-      </ol></div>
-    </div>
-
-    <div class="panel" role="tabpanel" id="tab-it" style="--accent:var(--c-it)" hidden>
-      <h3>Information Technology, B.S.I.T. (Kent State)</h3>
-      <span class="tag">Fully online</span><span class="tag">Tech + systems</span><span class="tag">8 concentrations</span>
-      <div class="facts">
-        <div class="fact"><b>120 credits</b><span>About 4 years full-time</span></div>
-        <div class="fact"><b>Online</b><span>Kent lists this program as fully online</span></div>
-        <div class="fact"><b>IT 21015</b><span>Project Management &amp; Collaboration is a required class</span></div>
-        <div class="fact"><b>Many lanes</b><span>Cyber, cloud, databases, web, health IT, more</span></div>
-      </div>
-      <div class="cols">
-        <div><h3>Why it's interesting</h3><ul>
-          <li>The "Integrated IT" concentration points straight at IT project manager and systems analyst.</li>
-          <li>Tech skills + calm under pressure + delegating is a rare, valuable mix.</li>
-          <li>Online means flexible hours for a job or softball.</li>
-          <li>Lots of remote-friendly jobs once you have experience.</li>
-        </ul></div>
-        <div><h3>What to watch</h3><ul>
-          <li>Fully online takes serious self-discipline, with less campus social life.</li>
-          <li>Some IT job areas are shrinking (Kent's own page shows network admin jobs projected to decline).</li>
-          <li>Entry-level tech is competitive right now. Internships and certs matter a lot.</li>
-          <li>You'd want to actually enjoy tinkering with tech, not just tolerate it.</li>
-        </ul></div>
-      </div>
-      <div class="ladder"><h3>A possible ladder</h3><ol>
-        <li><span class="yr">Years 1–4</span>Classes + help desk or IT support job on the side</li>
-        <li><span class="yr">Years 4–6</span>IT support, junior analyst, or IT project coordinator</li>
-        <li><span class="yr">Years 6–9</span>Systems analyst, IT project manager</li>
-        <li><span class="yr">Later</span>IT manager, senior PM, security or data roles</li>
-      </ol></div>
-    </div>
-  </section>
-
-  <!-- COST -->
-  <section id="cost">
-    <h2>Cost &amp; time</h2>
-    <p class="lede">What each one costs, how long it takes, and how much financial aid could cover. Adjust the aid amounts once the FAFSA results come back.</p>
-
-    <div class="sim" style="margin-bottom:14px">
-      <div class="ctrls">
-        <div class="ctrl-group">
-          <h3>Your aid</h3>
-          <div class="ctrl"><label for="aPell">Pell Grant per year <output id="aPellO"></output></label><input type="range" id="aPell" min="0" max="7395" step="5" value="7395"></div>
-          <div class="ctrl"><label for="aOther">Other grants/scholarships per year <output id="aOtherO"></output></label><input type="range" id="aOther" min="0" max="8000" step="100" value="1500"></div>
-          <p class="fine" style="margin:8px 0 0">With your family's income, you should qualify for the full $7,395, the 2026–27 maximum. "Other" starts at $1,500: a federal SEOG grant ($250 a semester at regional campuses) plus Trumbull's automatic $1,000 scholarship for a 2.5+ GPA.</p>
-        </div>
-        <div class="ctrl-group">
-          <h3>Extras (guesses until you ask)</h3>
-          <div class="ctrl"><label for="aBooks">College books &amp; fees per year <output id="aBooksO"></output></label><input type="range" id="aBooks" min="0" max="3000" step="100" value="1000"></div>
-          <div class="ctrl"><label for="aKit">Cosmetology kit &amp; books <output id="aKitO"></output></label><input type="range" id="aKit" min="0" max="4000" step="100" value="2000"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="costgrid">
-      <div class="costcard" style="--accent:var(--c-biz)">
-        <h3>Bachelor's degree</h3>
-        <p class="where">Kent State Trumbull, Ohio resident, 2026–27 rates</p>
-        <div class="row"><span>Credits to graduate</span><b>120</b></div>
-        <div class="row"><span>Lower-division (100–200 level)</span><b>$355.99 / credit</b></div>
-        <div class="row"><span>Upper-division (300–400 level)</span><b>$417.30 / credit</b></div>
-        <div class="ctrl" style="margin:8px 0 4px"><label for="aUpper">Upper-division credits in your major <output id="aUpperO"></output></label><input type="range" id="aUpper" min="39" max="60" step="3" value="45"></div>
-        <div class="row"><span>If paid credit by credit (part-time)</span><b id="kPer"></b></div>
-        <div class="row"><span>Full-time, 12–18 credits a semester (flat rate)</span><b id="kFlat"></b></div>
-        <div class="row"><span>Books &amp; fees (4 yrs)</span><b id="kBooks"></b></div>
-        <div class="row"><span>Total cost, full-time</span><b id="kTotal"></b></div>
-        <div class="row minus"><span>Total aid (8 semesters)</span><b id="kAid"></b></div>
-        <div class="bottom"><span class="big" id="kNet"></span><span class="sub" id="kNetSub"></span></div>
-        <p class="fine" style="margin:10px 0 0" id="kTip"></p>
-      </div>
-      <div class="costcard" style="--accent:var(--c-cosmo)">
-        <h3>Cosmetology license</h3>
-        <p class="where">Raphael's School of Beauty Culture, Niles (1,500-hour course)</p>
-        <div class="row"><span>Time</span><b>10–14 months full-time</b></div>
-        <div class="row"><span>Tuition</span><b>$16,500</b></div>
-        <div class="row"><span>Kit &amp; books</span><b id="rKit"></b></div>
-        <div class="row"><span>State exam + license</span><b>a few hundred $</b></div>
-        <div class="row"><span>Total cost</span><b id="rTotal"></b></div>
-        <div class="row minus"><span>Pell (about 1⅔ years' worth)</span><b id="rAid"></b></div>
-        <div class="bottom"><span class="big" id="rNet"></span><span class="sub" id="rNetSub"></span></div>
-      </div>
-    </div>
-
-    <div class="timeline" style="--accent:var(--c-biz)">
-      <h3>Time until full-time paycheck</h3>
-      <div class="tlaxis" aria-hidden="true"><span></span><span>Yr 1</span><span>Yr 2</span><span>Yr 3</span><span>Yr 4</span><span>Yr 5</span><span>Yr 6</span></div>
-      <div class="tl" style="--accent:var(--c-cosmo)"><span>Cosmetology</span><div class="lane"><div class="seg" style="left:0;width:17%;background:var(--c-cosmo)">School</div><div class="seg work" style="left:17%;width:83%">Working</div></div></div>
-      <div class="tl" style="--accent:var(--c-biz)"><span>Degree</span><div class="lane"><div class="seg" style="left:0;width:66.6%;background:var(--c-biz)">School (+ part-time job)</div><div class="seg work" style="left:66.6%;width:33.4%">Working</div></div></div>
-      <div class="tl" style="--accent:var(--c-biz)"><span>Degree with CCP head start</span><div class="lane"><div class="seg" style="left:0;width:55%;background:var(--c-biz)">School</div><div class="seg work" style="left:55%;width:45%">Working</div></div></div>
-      <p class="fine" style="margin:10px 0 0">The CCP line assumes you finish a semester or more of college classes for free before graduating from homeschool. Every free credit you bring in shortens the degree.</p>
-    </div>
-
-    <div class="note" style="margin-top:14px;max-width:none">
-      <p><strong>Things worth knowing:</strong></p>
-      <p>Kent's Golden Guarantee locks the Ohio resident tuition rate for your starting class, so it won't jump while you're there.</p>
-      <p>Pell has a lifetime cap of about six years of full-time use. Using it for cosmetology school spends a chunk of that, which matters if you want a degree later.</p>
-      <p>Raphael's only accepts homeschool grads with a diploma from a state-approved program, a GED, or a diploma certified by the local superintendent. A plain parent-made transcript may not be enough there, so ask before applying.</p>
-      <p>The full-time math assumes about one semester at the upper-division rate for every 15 upper-division credits. Ask the bursar exactly how a semester with a mix of both levels gets billed.</p><p>The IT degree is fully online, and Kent prices online programs separately, so its cost may differ from these campus rates.</p>
-    </div>
-  </section>
-
-  <!-- MONEY -->
-  <section id="money">
-    <h2>Money over time</h2>
-    <p class="lede">First, what jobs around Warren and Youngstown actually pay right now. Then slide things around to see how "start earning sooner" stacks up against "start later, grow faster."</p>
-
-    <div class="tablewrap" style="margin-bottom:10px">
-      <table>
-        <thead><tr><th>Job</th><th>Warren / Youngstown</th><th>Cleveland area (about an hour away)</th></tr></thead>
-        <tbody>
-          <tr><td colspan="3" style="background:color-mix(in srgb,var(--pink) 12%,transparent);font-weight:600">Cosmetology</td></tr>
-          <tr><td>Great Clips stylist</td><td>$11–14/hr + tips</td><td>$25–45/hr, counting tips and incentives</td></tr>
-          <tr><td>Retail salon (JCPenney, Ulta)</td><td>$11–16/hr (JCPenney, Niles)</td><td>$11–16.30/hr (Ulta, Warrensville Hts)</td></tr>
-          <tr><td>Independent salon</td><td>$12–20/hr, or commission + tips</td><td>$15–25/hr; one salon lists $20 base, $24–27 with tips + commission</td></tr>
-          <tr><td>Sport Clips</td><td>$25–35/hr, counting tips + commission</td><td>$23–40/hr, counting tips + commission</td></tr>
-          <tr><td>Typical stylist overall</td><td>$13.34/hr median before tips (2022)</td><td>About $26/hr average in Indeed postings; about $42.5k/yr average</td></tr>
-          <tr><td colspan="3" style="background:color-mix(in srgb,var(--sky) 12%,transparent);font-weight:600">Entry-level business, project, and tech</td></tr>
-          <tr><td>IT help desk</td><td>$15–22/hr (YSU: $22.08)</td><td>$15–20/hr at the low end; about $22.45/hr average; $35k–$45k salaried</td></tr>
-          <tr><td>Junior business analyst</td><td>AVI Foodsystems (Warren) hiring, pay not listed</td><td>$20–24/hr (junior associate); $49k–$73k (Business Analyst I, hybrid)</td></tr>
-          <tr><td>Project coordinator</td><td>YSU coordinator roles $32k–$50k</td><td>About $22.72/hr average for entry level; postings at $50k–$58k base and $60k–$66k (City of Cleveland)</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="fine">From Indeed, Glassdoor, ZipRecruiter, and Raphael's catalog, 2026. Salon ads that count tips and commission show what an established stylist with a full book can earn. New stylists usually start near the low end. Several help desk jobs only require a high school diploma, so you could do one part-time during college.</p>
-    <div class="note" style="max-width:none;margin:12px 0 22px">
-      <p><strong>What Cleveland changes:</strong> pay is higher on both paths, but the commute is about an hour each way, which adds gas and time. Degree jobs often come with hybrid or remote options, so living in Warren and working for a Cleveland company is realistic. A stylist has to be in the chair, and clients usually live near the salon, so working as a stylist in Cleveland generally means living closer to it.</p>
-    </div>
-    <div class="sim">
-      <div class="toggle" role="group" aria-label="Where you work">
-        <span class="fine" style="align-self:center;margin-right:4px">Starting pay based on:</span>
-        <button class="tab" type="button" id="locWarren">Warren / Youngstown</button>
-        <button class="tab" type="button" id="locCle">Cleveland area</button>
-      </div>
-      <div class="ctrls">
-        <div class="ctrl-group">
-          <h3><span class="dot" style="background:var(--c-cosmo)"></span>Cosmetology</h3>
-          <div class="ctrl"><label for="cStart">First full year pay <output id="cStartO"></output></label><input type="range" id="cStart" min="18000" max="45000" step="1000" value="28000"></div>
-          <div class="ctrl"><label for="cGrow">Raise per year <output id="cGrowO"></output></label><input type="range" id="cGrow" min="0" max="10" step="0.5" value="4"></div>
-          <div class="ctrl"><label for="cCost">Out-of-pocket school cost <output id="cCostO"></output></label><input type="range" id="cCost" min="0" max="25000" step="500" value="7500"></div>
-        </div>
-        <div class="ctrl-group">
-          <h3><span class="dot" style="background:var(--c-biz)"></span>Degree (Business or IT)</h3>
-          <div class="ctrl"><label for="dStart">First job pay after graduating <output id="dStartO"></output></label><input type="range" id="dStart" min="30000" max="70000" step="1000" value="42000"></div>
-          <div class="ctrl"><label for="dGrow">Raise per year <output id="dGrowO"></output></label><input type="range" id="dGrow" min="0" max="10" step="0.5" value="5"></div>
-          <div class="ctrl"><label for="dPT">Part-time pay while in school <output id="dPTO"></output></label><input type="range" id="dPT" min="0" max="25000" step="1000" value="12000"></div>
-        </div>
-      </div>
-      <div class="toggle" role="group" aria-label="Chart view">
-        <button class="tab" aria-pressed="true" id="viewTotal">Total earned so far</button>
-        <button class="tab" aria-pressed="false" id="viewYear">Pay each year</button>
-      </div>
-      <div class="chartwrap"><svg class="chart" id="chart" viewBox="0 0 640 320" role="img" aria-label="Earnings comparison chart"></svg></div>
-      <p class="readout" id="readout"></p>
-      <p class="fine">The defaults are rough guesses for a starting point, not facts. To make them real, search Indeed for "stylist" and "project coordinator" jobs near Warren and plug in what you see. The cosmetology school cost here fills in automatically from the Cost &amp; time section. College cost isn't subtracted on this chart, so if the Cost &amp; time section shows a gap for the degree, keep that in mind.</p>
-    </div>
-  </section>
-
-  <!-- GETTING IN -->
-  <section id="getin">
-    <h2>Getting into college</h2>
-    <p class="lede">Good news: Kent State Trumbull is open admission for anyone with a high school diploma or the equivalent, and no ACT or SAT is required. Kent also accepts a homeschool transcript your family makes, as long as it has the right pieces.</p>
-
-    <div class="routes">
-      <div class="route">
-        <span class="verdict v-good">Your main route</span>
-        <h3>A homeschool transcript your family makes</h3>
-        <p>You don't need to be in an official homeschool program. Kent asks homeschooled applicants for two things:</p>
-        <ul>
-          <li><strong>A typed transcript</strong> listing your courses and grades for grades 9–12 and showing you graduated. It needs your homeschool's name and address, the date, and a handwritten signature from your parent.</li>
-          <li><strong>A letter from your school district superintendent</strong> confirming your homeschool status. Ohio homeschoolers notify the district every year, so ask for your most recent acknowledgment letter. If there isn't one on file, get that sorted first.</li>
-          <li><strong>Build it around Ohio's college-prep list:</strong> 4 years English, 4 years math (through Algebra II), 3 science, 3 social studies, 2 foreign language, and 1 art. Your ASL can cover the foreign language. Anything else missing is what to work on now.</li>
-          <li><strong>Your GPA on it matters.</strong> It's what qualifies you for merit scholarships (see Cost &amp; time). Keep the grades honest, because placement tests will show where you really are.</li>
-        </ul>
-      </div>
-      <div class="route">
-        <span class="verdict v-good">Makes your transcript stronger</span>
-        <h3>College Credit Plus (CCP) while still homeschooling</h3>
-        <p>Ohio lets homeschooled students in grades 7–12 take real college classes, and the state can cover the cost.</p>
-        <ul>
-          <li>College grades on a Kent transcript back up your homemade transcript. They're proof you can do college work.</li>
-          <li>You stay a homeschooler, so you can still play high school softball.</li>
-          <li>Credits count toward your Kent degree and your high school transcript.</li>
-          <li>To qualify you generally need a 3.0 unweighted GPA <em>or</em> college-ready placement test scores.</li>
-          <li>Homeschoolers apply separately for state funding, and there's a letter of intent due by April 1 for the next school year.</li>
-        </ul>
-      </div>
-      <div class="route flag">
-        <span class="verdict v-careful">Probably not your route</span>
-        <h3>GED now</h3>
-        <p>A GED would get you into Kent, but in your situation it costs more than it gives you:</p>
-        <ul>
-          <li>Ohio requires a <strong>school withdrawal form</strong> to take the GED at 16, 17, or 18, plus a notarized parent consent form if you're under 18. That likely ends high school softball and CCP.</li>
-          <li>A GED has no GPA, so you could miss out on GPA-based scholarships.</li>
-          <li>One exception to know about: Raphael's cosmetology school only takes homeschoolers with a diploma from a state-approved program, a GED, or a diploma certified by your superintendent. If you choose cosmetology, call them and ask whether your transcript will work before planning around a GED.</li>
-        </ul>
-      </div>
-      <div class="route">
-        <span class="verdict v-good">Smart no matter what</span>
-        <h3>Check where you are, without committing</h3>
-        <p>The GED Ready practice tests on GED.com show whether you're at a high school level in math, reading, science, and social studies. Taking a practice test doesn't require withdrawing from anything. It's a cheap checkup that tells you which subjects to work on before college placement tests.</p>
-      </div>
-    </div>
-
-    <div class="check">
-      <h3>Quick honest check</h3>
-      <p class="fine" style="margin:0 0 6px">Just for you. Check the ones that are true right now.</p>
-      <label><input type="checkbox" class="rd"> I can solve algebra problems like 3x + 7 = 22 without help</label>
-      <label><input type="checkbox" class="rd"> I've worked with graphs, slopes, and simple equations with two variables</label>
-      <label><input type="checkbox" class="rd"> I can write a 2–3 page essay with a clear point and evidence</label>
-      <label><input type="checkbox" class="rd"> I read nonfiction (articles, textbooks) and can summarize them</label>
-      <label><input type="checkbox" class="rd"> I've had regular science and history classes, not just a little here and there</label>
-      <label><input type="checkbox" class="rd"> I can study on my own for an hour without someone checking on me</label>
-      <p id="readyOut" aria-live="polite"></p>
-    </div>
-  </section>
-
-  <!-- STUDY -->
-  <section id="study">
-    <h2>Your study plan</h2>
-    <p class="lede">Getting into Trumbull is the easy part. Placement tests decide which classes you start in, and low scores mean non-credit catch-up classes that cost time and grant money. A few months of focused work now can skip all of that.</p>
-    <div class="note" style="max-width:none;margin-bottom:16px">
-      <p><strong>How placement works at Kent:</strong> every new student takes the ALEKS math placement, which is online and takes 60–90 minutes. If you don't have ACT or SAT scores, regional campuses also use Accuplacer for reading and writing. Kent covers the cost of ALEKS, a six-week learning module, and a retake, so you get a second shot.</p>
-    </div>
-
-    <h3>What do you want to work on?</h3>
-    <div class="chips" id="subjChips"></div>
-    <p><button class="btn ghost" type="button" id="useCheck">Fill in from my honest check</button></p>
-    <div class="ctrl" style="max-width:420px"><label for="studyHrs">Hours a week you can study <output id="studyHrsO"></output></label><input type="range" id="studyHrs" min="2" max="12" step="1" value="5"></div>
-    <div class="studyout" id="studyOut"></div>
-    <p class="fine" style="margin-top:14px">Everything linked here is free. Short daily sessions (20–40 minutes) work better than one long weekend cram.</p>
-  </section>
-
-  <!-- ASL -->
-  <section id="asl">
-    <h2>Your ASL is a big deal 🤟</h2>
-    <p class="lede">Knowing American Sign Language puts you ahead in more ways than you might think. Here's where it helps.</p>
-    <div class="combos">
-      <div class="combo" style="border-top:8px solid var(--butter)">
-        <h3>On your transcript</h3>
-        <p>Ohio's college-prep list asks for 2 years of a foreign language. List your ASL there. Kent counts its ASL courses as foreign language, so it's a real credential, not just a hobby.</p>
-      </div>
-      <div class="combo" style="border-top:8px solid var(--mint)">
-        <h3>Possible free college credit</h3>
-        <p>Kent invites students who learned ASL, in classes or informally, to take an ASL placement test by emailing <a href="mailto:MCLS@kent.edu">MCLS@kent.edu</a>. If you place above the first course, you may be able to earn credit for what you already know. Elementary ASL I and II are 4 credits each.</p>
-      </div>
-      <div class="combo" style="border-top:8px solid var(--sky)">
-        <h3>An edge in any job</h3>
-        <p>Very few stylists, project coordinators, or IT techs can sign. You could serve Deaf clients other salons can't, handle accessibility in a business or HR role, or support Deaf users in IT. Put it on every resume and application.</p>
-      </div>
-      <div class="combo" style="border-top:8px solid var(--pink)">
-        <h3>A path of its own</h3>
-        <p>Kent State offers a bachelor's in American Sign Language and one in ASL/English Interpreting. If you love signing, it's worth looking at alongside business and IT. Ask which campuses offer them.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOFTBALL -->
-  <section id="softball">
-    <h2>Softball 🥎</h2>
-    <p class="lede">Ohio law says homeschoolers get access to extracurriculars at the public school they'd otherwise attend. So staying homeschooled keeps that door open. Details (eligibility rules, paperwork) are up to the district and OHSAA, so ask the athletic director.</p>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>If you…</th><th>High school team</th><th>Other ways to play</th></tr></thead>
-        <tbody>
-          <tr><td>Stay homeschooled (+ maybe CCP)</td><td>Possible under Ohio law. Confirm with the district.</td><td>Travel or rec leagues too</td></tr>
-          <tr><td>Take the GED now</td><td>Probably not, since you'd be withdrawn</td><td>Community rec leagues</td></tr>
-          <tr><td>Start at Kent State Trumbull</td><td>No (you've graduated)</td><td>Campus rec and club activities, community leagues. Less intense but still a real outlet.</td></tr>
-          <tr><td>Go to cosmetology school</td><td>No (after graduating)</td><td>Community rec leagues on your own time</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- EXPERIENCES -->
-  <section id="experiences">
-    <h2>Beyond the paycheck</h2>
-    <p class="lede">A path isn't just a job. It's who you meet, what you try, and how big your world gets.</p>
-    <div class="combos">
-      <div class="combo" style="border-top:8px solid var(--c-biz)">
-        <h3>College (in person)</h3>
-        <p>Classes in subjects you've never tried, which is how a lot of people find what they actually love. Clubs, rec sports, student government, internships, study abroad, and people from different backgrounds. Professors and advisors who can write recommendations and open doors. Plenty of people change majors once they see what's out there, and that's normal.</p>
-      </div>
-      <div class="combo" style="border-top:8px solid var(--c-it)">
-        <h3>College (online, like the IT degree)</h3>
-        <p>The same degree and the same doors afterward, with more flexibility. But fewer of the campus experiences happen on their own, so you'd have to go after them on purpose, for example by joining Trumbull clubs or rec sports, or taking some classes in person.</p>
-      </div>
-      <div class="combo" style="border-top:8px solid var(--c-cosmo)">
-        <h3>Cosmetology</h3>
-        <p>New experiences come from the work itself: meeting new clients every day, hair shows, competitions, advanced classes, and maybe one day working at weddings, on photo shoots, or in another city. The world it opens up is real, just narrower and focused on one field.</p>
-      </div>
-    </div>
-    <div class="note" style="margin-top:14px;max-width:none">
-      <p><strong>Something to think about:</strong> which kind of new experiences sound exciting to you? Trying lots of different things to see what clicks, or going deep on one thing you already know you like?</p>
-    </div>
-  </section>
-
-  <!-- COMBOS -->
-  <section id="combos">
-    <h2>It doesn't have to be one or the other</h2>
-    <p class="lede">Some of the strongest plans mix paths. A few to think about:</p>
-    <div class="combos">
-      <div class="combo">
-        <div class="mix"><span class="dot" style="background:var(--c-cosmo)"></span><span class="dot" style="background:var(--c-biz)"></span></div>
-        <h3>Future salon owner</h3>
-        <p>Get the cosmetology license first and work, then take business classes part-time. Owning a salon is a business management job.</p>
-      </div>
-      <div class="combo">
-        <div class="mix"><span class="dot" style="background:var(--c-biz)"></span><span class="dot" style="background:var(--c-cosmo)"></span></div>
-        <h3>Degree with a side hustle</h3>
-        <p>Do the BBA, and keep hair or nails as a fun side skill. Some career-tech centers let high schoolers finish cosmetology hours before graduating, so ask if homeschoolers can join.</p>
-      </div>
-      <div class="combo">
-        <div class="mix"><span class="dot" style="background:var(--c-biz)"></span><span class="dot" style="background:var(--c-it)"></span></div>
-        <h3>Business + tech</h3>
-        <p>BBA major with IT or data classes as electives. "Business analyst" and "IT project coordinator" love people who can talk to both sides.</p>
-      </div>
-      <div class="combo">
-        <div class="mix"><span class="dot" style="background:var(--butter)"></span><span class="dot" style="background:var(--c-biz)"></span></div>
-        <h3>Head start with CCP</h3>
-        <p>Stay homeschooled, play softball, and knock out college classes for free now. You'd show up at Kent with credits already done.</p>
-      </div>
-    </div>
-
-    <div class="note" style="margin-top:20px">
-      <p><strong>About the CAPM cert:</strong> it's the entry-level project management certification. You need a high school diploma or GED plus 23 hours of project management education. The exam is $225 for PMI members or $300 for non-members. It won't land a PM job by itself, but it shows you're serious. It pairs best with a degree or some real work experience.</p>
-    </div>
-  </section>
-
-  <!-- PLAN -->
-  <section id="plan">
-    <h2>Your plan</h2>
-    <p class="lede">Check things off as you go. Your progress saves on this device.</p>
-    <div class="todo" id="todo"></div>
-
-    <h3 style="margin-top:28px">Your own words</h3>
-    <p class="fine" style="margin-top:0">What's pulling you toward each path? What worries you? Nobody sees this but you.</p>
-    <textarea id="notes" placeholder="Honestly I keep thinking about..."></textarea>
-    <div class="saved" id="savedMsg" aria-live="polite"></div>
-  </section>
-</main>
-
-<footer>
-  <p>Sources: Kent State University program pages (BSIT and Business Management BBA, Trumbull); Ohio Department of Education &amp; Workforce (GED age and withdrawal rules); HSLDA summary of Ohio law (homeschool extracurriculars and CCP); U.S. Dept. of Education (2026–27 Pell maximum); BLS wage data (May 2025); PMI (CAPM). Kent State 2026–27 regional campus tuition, grants, homeschool admission requirements, and Trumbull Achievement scholarship; Raphael's School of Beauty Culture 2025 catalog (tuition rate, program length, homeschool admission rules, local wage data). Programs, prices, and rules change, so confirm everything with the school or office directly.</p>
-  <p>Kent State Trumbull: 330-847-0571 · Trumbull advising: 330-675-8860 · 4314 Mahoning Ave NW, Warren</p>
-</footer>
-
-<script>
-(function(){
-  // ---------- storage helpers ----------
-  const store = {
-    get(k, d){ try{ const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); }catch(e){ return d; } },
-    set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
-  };
-
-  // ---------- quiz ----------
-  const Q = [
-    {q:"Free Saturday. You'd rather…", o:[
-      ["Do someone's hair or makeup for an event",{c:2}],
-      ["Plan the group trip and decide who brings what",{b:2}],
-      ["Set up a new phone, mess with apps, fix the Wi-Fi",{i:2}]]},
-    {q:"Something goes wrong in the middle of a game or project. You…", o:[
-      ["Stay calm and start telling people what to do",{b:2,i:1}],
-      ["Go fix the actual broken thing",{i:2}],
-      ["Make sure everyone's okay and feeling better",{c:2,b:1}]]},
-    {q:"Money-wise, you'd pick…", o:[
-      ["Get paid soon, even if the ceiling is lower",{c:2}],
-      ["Slower start, but more room to grow",{b:2,i:2}],
-      ["Be my own boss someday",{c:1,b:2}]]},
-    {q:"Four more years of classes sounds…", o:[
-      ["Fine. I can do that",{b:2,i:2}],
-      ["Like a hard pass",{c:2}],
-      ["Okay if some of it's online or flexible",{i:2,b:1}]]},
-    {q:"Your ideal workday is mostly…", o:[
-      ["Hands-on with people, face to face",{c:2}],
-      ["People, plans, and meetings",{b:2}],
-      ["Screens, systems, and solving puzzles",{i:2}]]},
-    {q:"Standing 8+ hours, working nights and Saturdays…", o:[
-      ["No problem",{c:2}],
-      ["I'd rather have a mostly 9-to-5",{b:1,i:2}],
-      ["Some of both is fine",{b:2}]]},
-    {q:"Math and you…", o:[
-      ["We're cool",{i:2,b:1}],
-      ["Not my favorite, but I can push through",{b:1}],
-      ["I'd avoid it if I could",{c:1}]]},
-    {q:"Ten years from now, you're…", o:[
-      ["Running my own salon or beauty brand",{c:2,b:2}],
-      ["Leading a team at a company",{b:2,i:1}],
-      ["In a tech or analyst job, maybe remote",{i:2}]]}
-  ];
-  let answers = store.get("mk_quiz", Array(Q.length).fill(null));
-  if(!Array.isArray(answers) || answers.length !== Q.length) answers = Array(Q.length).fill(null);
-  const box = document.getElementById("quizBox");
-
-  function renderQuiz(){
-    box.innerHTML = "";
-    Q.forEach((item, qi) => {
-      const d = document.createElement("div"); d.className = "q";
-      d.innerHTML = `<div class="num">${qi+1} of ${Q.length}</div><h3>${item.q}</h3><div class="opts"></div>`;
-      const opts = d.querySelector(".opts");
-      item.o.forEach((opt, oi) => {
-        const b = document.createElement("button");
-        b.className = "opt"; b.type = "button"; b.textContent = opt[0];
-        b.setAttribute("aria-pressed", answers[qi] === oi ? "true" : "false");
-        b.addEventListener("click", () => { answers[qi] = oi; store.set("mk_quiz", answers); renderQuiz(); scoreQuiz(); });
-        opts.appendChild(b);
-      });
-      box.appendChild(d);
-    });
-  }
-  function scoreQuiz(){
-    const done = answers.filter(a => a !== null).length;
-    document.getElementById("quizProgress").textContent = done < Q.length ? `${done} of ${Q.length} answered` : "All done. Results below.";
-    const res = document.getElementById("results");
-    if(done < Q.length){ res.hidden = true; return; }
-    let s = {c:0,b:0,i:0};
-    answers.forEach((a, qi) => { const w = Q[qi].o[a][1]; for(const k in w) s[k] += w[k]; });
-    const max = {c:0,b:0,i:0};
-    Q.forEach(item => { ["c","b","i"].forEach(k => { max[k] += Math.max(...item.o.map(o => o[1][k]||0)); }); });
-    const pct = {}; ["c","b","i"].forEach(k => pct[k] = Math.round(100*s[k]/max[k]));
-    res.hidden = false;
-    requestAnimationFrame(() => {
-      document.getElementById("fc").style.width = pct.c + "%";
-      document.getElementById("fb").style.width = pct.b + "%";
-      document.getElementById("fi").style.width = pct.i + "%";
-    });
-    document.getElementById("pc").textContent = pct.c + "%";
-    document.getElementById("pb").textContent = pct.b + "%";
-    document.getElementById("pi").textContent = pct.i + "%";
-    const names = {c:"cosmetology",b:"business management",i:"IT"};
-    const sorted = Object.keys(pct).sort((a,b) => pct[b]-pct[a]);
-    let t = `Your answers lean most toward ${names[sorted[0]]}.`;
-    if(pct[sorted[0]] - pct[sorted[1]] <= 10) t += ` But ${names[sorted[1]]} is right behind it, so a mix might suit you.`;
-    if(pct.c >= 50 && pct.b >= 50) t += " You've got real overlap between beauty and business. Check out the salon-owner idea in Mix & match.";
-    t += " Treat this as a conversation starter, not an answer.";
-    document.getElementById("resultText").textContent = t;
-  }
-  document.getElementById("resetQuiz").addEventListener("click", () => {
-    answers = Array(Q.length).fill(null); store.set("mk_quiz", answers); renderQuiz(); scoreQuiz();
-    document.getElementById("quiz").scrollIntoView();
-  });
-  renderQuiz(); scoreQuiz();
-
-  // ---------- path tabs ----------
-  const tabs = document.querySelectorAll("[data-tab]");
-  function openTab(id){
-    tabs.forEach(t => t.setAttribute("aria-selected", t.dataset.tab === id ? "true" : "false"));
-    ["cosmo","biz","it"].forEach(k => document.getElementById("tab-"+k).hidden = (k !== id));
-  }
-  tabs.forEach(t => t.addEventListener("click", () => openTab(t.dataset.tab)));
-  document.querySelectorAll("[data-open]").forEach(a => a.addEventListener("click", () => openTab(a.dataset.open)));
-
-  // ---------- money sim ----------
-  const ids = ["cStart","cGrow","cCost","dStart","dGrow","dPT"];
-  const el = {}; ids.forEach(i => el[i] = document.getElementById(i));
-  const saved = store.get("mk_sim2", null);
-  if(saved) ids.forEach(i => { if(saved[i] !== undefined) el[i].value = saved[i]; });
-  let view = "total";
-  const money = n => "$" + Math.round(n).toLocaleString();
-  const short = n => Math.abs(n) >= 1000000 ? "$" + (n/1e6).toFixed(1) + "M" : "$" + Math.round(n/1000) + "k";
-  const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
-
-  function compute(){
-    const Y = 12;
-    const v = {}; ids.forEach(i => v[i] = parseFloat(el[i].value));
-    const cos = [], deg = [];
-    for(let y = 1; y <= Y; y++){
-      // cosmetology: year 1 is school (small part-time assumed 0), pays full from year 2
-      cos.push(y === 1 ? -v.cCost : v.cStart * Math.pow(1 + v.cGrow/100, y-2));
-      // degree: years 1-4 part-time, full from year 5
-      deg.push(y <= 4 ? v.dPT : v.dStart * Math.pow(1 + v.dGrow/100, y-5));
-    }
-    return {cos, deg, v, Y};
-  }
-  function draw(){
-    const {cos, deg, v, Y} = compute();
-    document.getElementById("cStartO").textContent = money(v.cStart);
-    document.getElementById("cGrowO").textContent = v.cGrow + "%";
-    document.getElementById("cCostO").textContent = money(v.cCost);
-    document.getElementById("dStartO").textContent = money(v.dStart);
-    document.getElementById("dGrowO").textContent = v.dGrow + "%";
-    document.getElementById("dPTO").textContent = money(v.dPT);
-    store.set("mk_sim2", Object.fromEntries(ids.map(i => [i, el[i].value])));
-
-    const cum = a => { let s = 0; return a.map(x => s += x); };
-    const A = view === "total" ? cum(cos) : cos.map((x,i) => i === 0 ? 0 : x);
-    const B = view === "total" ? cum(deg) : deg;
-    const W = 640, H = 320, L = 58, R = 16, T = 18, Bm = 40;
-    const all = A.concat(B, [0]);
-    let lo = Math.min(...all), hi = Math.max(...all);
-    if(hi === lo) hi = lo + 1;
-    const pad = (hi - lo) * 0.08; hi += pad; lo = Math.min(0, lo - (lo < 0 ? pad : 0));
-    const x = i => L + (W - L - R) * (i / (Y - 1));
-    const y = val => T + (H - T - Bm) * (1 - (val - lo) / (hi - lo));
-    const ink = css("--ink"), muted = css("--muted"), line = css("--line");
-    let g = "";
-    for(let k = 0; k <= 4; k++){
-      const val = lo + (hi - lo) * k / 4, yy = y(val);
-      g += `<line x1="${L}" x2="${W-R}" y1="${yy}" y2="${yy}" stroke="${line}" stroke-width="1"/>`;
-      g += `<text x="${L-8}" y="${yy+4}" text-anchor="end" font-size="12" fill="${muted}">${short(val)}</text>`;
-    }
-    if(lo < 0) g += `<line x1="${L}" x2="${W-R}" y1="${y(0)}" y2="${y(0)}" stroke="${muted}" stroke-width="1.5" stroke-dasharray="4 4"/>`;
-    for(let i = 0; i < Y; i++){
-      g += `<text x="${x(i)}" y="${H-16}" text-anchor="middle" font-size="12" fill="${muted}">${i+1}</text>`;
-    }
-    g += `<text x="${(L+W-R)/2}" y="${H-1}" text-anchor="middle" font-size="12" fill="${muted}">Years from now</text>`;
-    // shade school years
-    g += `<rect x="${x(0)}" y="${T}" width="${x(3)-x(0)}" height="${H-T-Bm}" fill="${css("--sky")}" opacity=".07"/>`;
-    g += `<text x="${(x(0)+x(3))/2}" y="${T+14}" text-anchor="middle" font-size="12" fill="${muted}">degree years</text>`;
-    const path = arr => arr.map((val,i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(val).toFixed(1)}`).join(" ");
-    const pc = css("--c-cosmo") || css("--pink"), pb = css("--sky");
-    g += `<path d="${path(A)}" fill="none" stroke="${css("--pink")}" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>`;
-    g += `<path d="${path(B)}" fill="none" stroke="${pb}" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>`;
-    A.forEach((val,i) => g += `<circle cx="${x(i)}" cy="${y(val)}" r="3.5" fill="${css("--pink")}"><title>Cosmetology, year ${i+1}: ${money(val)}</title></circle>`);
-    B.forEach((val,i) => g += `<circle cx="${x(i)}" cy="${y(val)}" r="3.5" fill="${pb}"><title>Degree, year ${i+1}: ${money(val)}</title></circle>`);
-    g += `<text x="${x(Y-1)-4}" y="${y(A[Y-1]) + (A[Y-1] > B[Y-1] ? -10 : 18)}" text-anchor="end" font-size="13" font-weight="600" fill="${css("--pink")}">Cosmetology</text>`;
-    g += `<text x="${x(Y-1)-4}" y="${y(B[Y-1]) + (B[Y-1] >= A[Y-1] ? -10 : 18)}" text-anchor="end" font-size="13" font-weight="600" fill="${pb}">Degree</text>`;
-    document.getElementById("chart").innerHTML = g;
-
-    const ca = cum(cos), cb = cum(deg);
-    let cross = -1;
-    for(let i = 0; i < Y; i++){ if(cb[i] > ca[i]){ cross = i; break; } }
-    let msg;
-    if(cross === -1) msg = `With these numbers, cosmetology stays ahead in total earnings for all ${Y} years.`;
-    else msg = `With these numbers, the degree path catches up in total money earned around year ${cross+1}. By year ${Y}, the gap is about ${money(Math.abs(cb[Y-1]-ca[Y-1]))} in favor of ${cb[Y-1] > ca[Y-1] ? "the degree" : "cosmetology"}.`;
-    document.getElementById("readout").textContent = msg;
-  }
-  ids.forEach(i => el[i].addEventListener("input", draw));
-  const vt = document.getElementById("viewTotal"), vy = document.getElementById("viewYear");
-  function setView(nv){ view = nv; vt.setAttribute("aria-pressed", nv === "total"); vy.setAttribute("aria-pressed", nv === "year");
-    vt.style.background = nv === "total" ? "var(--ink)" : ""; vt.style.color = nv === "total" ? "var(--bg)" : "";
-    vy.style.background = nv === "year" ? "var(--ink)" : ""; vy.style.color = nv === "year" ? "var(--bg)" : ""; draw(); }
-  vt.addEventListener("click", () => setView("total"));
-  const lw = document.getElementById("locWarren"), lc = document.getElementById("locCle");
-  function setLoc(loc, apply){
-    [[lw,"w"],[lc,"c"]].forEach(([b,k]) => { const on = k === loc; b.setAttribute("aria-pressed", on); b.style.background = on ? "var(--ink)" : ""; b.style.color = on ? "var(--bg)" : ""; });
-    if(apply){ el.cStart.value = loc === "c" ? 34000 : 28000; el.dStart.value = loc === "c" ? 48000 : 42000; draw(); }
-    store.set("mk_loc", loc);
-  }
-  lw.addEventListener("click", () => setLoc("w", true));
-  lc.addEventListener("click", () => setLoc("c", true));
-  setLoc(store.get("mk_loc","w"), false);
-  vy.addEventListener("click", () => setView("year"));
-  setView("total");
-  if(window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", draw);
-
-  // ---------- cost calculator ----------
-  const cids = ["aPell","aOther","aBooks","aKit","aUpper"];
-  const ce = {}; cids.forEach(i => ce[i] = document.getElementById(i));
-  const csaved = store.get("mk_cost2", null);
-  if(csaved) cids.forEach(i => { if(csaved[i] !== undefined) ce[i].value = csaved[i]; });
-  function cost(){
-    const v = {}; cids.forEach(i => v[i] = parseFloat(ce[i].value));
-    store.set("mk_cost2", Object.fromEntries(cids.map(i => [i, ce[i].value])));
-    document.getElementById("aPellO").textContent = money(v.aPell);
-    document.getElementById("aOtherO").textContent = money(v.aOther);
-    document.getElementById("aBooksO").textContent = money(v.aBooks);
-    document.getElementById("aKitO").textContent = money(v.aKit);
-    // Kent Trumbull: real 2026-27 regional rates
-    const LO = 355.99, UP = 417.30, LO_FLAT = 3917.52, UP_FLAT = 4591.08;
-    const up = parseFloat(ce.aUpper.value), lo = 120 - up;
-    document.getElementById("aUpperO").textContent = up + " of 120";
-    const kPer = lo*LO + up*UP;
-    const upSems = Math.round(up/15), loSems = 8 - upSems;
-    const kFlat = loSems*LO_FLAT + upSems*UP_FLAT;
-    const kBooks = v.aBooks*4, kTotal = kFlat + kBooks;
-    const kAid = (v.aPell + v.aOther) * 4, kNet = kTotal - kAid;
-    document.getElementById("kPer").textContent = money(kPer);
-    document.getElementById("kFlat").textContent = money(kFlat);
-    document.getElementById("kBooks").textContent = money(kBooks);
-    document.getElementById("kTotal").textContent = money(kTotal);
-    document.getElementById("kAid").textContent = "−" + money(kAid);
-    document.getElementById("kNet").textContent = kNet > 0 ? money(kNet) : "$0";
-    document.getElementById("kNetSub").textContent = kNet > 0 ? `out of pocket over 4 years (about ${money(kNet/4)} a year)` : `out of pocket, with about ${money(-kNet)} left over for gas, a laptop, etc.`;
-    document.getElementById("kTip").textContent = `Full-time saves about ${money(kPer - kFlat)} because 12 to 18 credits cost the same flat amount each semester. Taking 15 or more credits a semester is the cheapest way through.`;
-    // Raphael's: 1,500 clock hours = one 900-hr aid year + 600/900 of a second
-    const rTotal = 16500 + v.aKit, rAid = Math.min(rTotal, v.aPell * (1 + 600/900)), rNet = rTotal - rAid;
-    document.getElementById("rKit").textContent = money(v.aKit);
-    document.getElementById("rTotal").textContent = money(rTotal);
-    document.getElementById("rAid").textContent = "−" + money(rAid);
-    document.getElementById("rNet").textContent = rNet > 0 ? money(rNet) : "$0";
-    document.getElementById("rNetSub").textContent = rNet > 0 ? "out of pocket, unless you find other aid or take a loan" : "out of pocket";
-    // feed the money chart
-    el.cCost.value = Math.round(Math.max(0, rNet)/500)*500;
-    draw();
-  }
-  cids.forEach(i => ce[i].addEventListener("input", cost));
-  cost();
-
-  // ---------- study plan ----------
-  const SUBJ = {
-    math:{name:"Math", color:"var(--sky)", weight:2, steps:[
-      'Find your level: take the unit tests in <a href="https://www.khanacademy.org/math/algebra" target="_blank" rel="noopener">Khan Academy Algebra 1</a>. Skip what you already know and start where you miss questions.',
-      'Finish Algebra 1, then move to <a href="https://www.khanacademy.org/math/algebra2" target="_blank" rel="noopener">Algebra 2</a>. Your transcript needs Algebra II, and the Business degree needs a C or better in Algebra for Calculus.',
-      'Do a little every day. Math sticks with repetition, not cramming.',
-      'When you take ALEKS at Kent and don\'t like your score, use the free six-week learning module and retake it.'],
-      done:"You're ready when you score 80% or higher on Khan Academy's Algebra 2 unit tests."},
-    writing:{name:"Writing", color:"var(--pink)", weight:1, steps:[
-      'Learn essay structure (thesis, evidence, conclusion) from <a href="https://owl.purdue.edu/" target="_blank" rel="noopener">Purdue OWL</a>, the guide college students use.',
-      'Write one 1–2 page response a week about something you read, and have someone mark it up.',
-      'Clean up grammar with <a href="https://www.khanacademy.org/humanities/grammar" target="_blank" rel="noopener">Khan Academy Grammar</a>.',
-      'Try the free WritePlacer practice on the <a href="https://accuplacer.collegeboard.org/students/prepare-for-accuplacer" target="_blank" rel="noopener">Accuplacer prep page</a>.'],
-      done:"You're ready when you can write a 3-page essay with a clear point and evidence over a weekend."},
-    reading:{name:"Reading", color:"var(--mint)", weight:1, steps:[
-      'Read nonfiction for 20 minutes a day: news articles, magazines, or library ebooks.',
-      'Practice with <a href="https://www.commonlit.org/" target="_blank" rel="noopener">CommonLit</a>, which has free passages with questions at every grade level.',
-      'After each article, sum it up in three sentences out loud or on paper.',
-      'Take the free reading practice on the <a href="https://accuplacer.collegeboard.org/students/prepare-for-accuplacer" target="_blank" rel="noopener">Accuplacer prep page</a>.'],
-      done:"You're ready when you can read a textbook chapter and explain the main ideas without looking back."},
-    sci:{name:"Science & history", color:"var(--butter)", weight:1, steps:[
-      'Your transcript needs 3 years of science and 3 of social studies. Fill gaps with <a href="https://www.khanacademy.org/science/biology" target="_blank" rel="noopener">Khan Academy Biology</a> and <a href="https://www.khanacademy.org/humanities/us-history" target="_blank" rel="noopener">US History</a>.',
-      'Keep a simple log of what you covered and your test scores. It backs up the courses on your transcript.',
-      'A College Credit Plus class in science or history counts for both your transcript and your degree.'],
-      done:"You're ready when each year of science and social studies on your transcript has real work behind it."},
-    habits:{name:"Study habits", color:"var(--ink)", weight:1, steps:[
-      'Pick the same time every day for studying, so it becomes routine.',
-      'Phone in another room. Work in 25-minute blocks with 5-minute breaks.',
-      'Do a quick weekly check-in with family on what you finished.',
-      'Once you start at Trumbull, the campus Learning Center offers help, so use it early instead of waiting until you\'re behind.'],
-      done:"You're ready when you can study for an hour on your own without someone checking on you."},
-    tech:{name:"Computer skills", color:"var(--sky)", weight:1, steps:[
-      'Learn Excel and Word with free lessons from <a href="https://edu.gcfglobal.org/" target="_blank" rel="noopener">GCFGlobal</a>. Almost every business and IT job uses them.',
-      'Practice typing until you can type without looking at the keys.',
-      'Build a simple budget spreadsheet for yourself. It\'s real practice and useful.'],
-      done:"You're ready when you can make a spreadsheet with formulas and a chart from scratch."}
-  };
-  const chipsEl = document.getElementById("subjChips");
-  let picked = store.get("mk_study", ["math"]);
-  const hrsEl = document.getElementById("studyHrs");
-  hrsEl.value = store.get("mk_studyhrs", 5);
-  Object.keys(SUBJ).forEach(k => {
-    const b = document.createElement("button");
-    b.type = "button"; b.className = "chip"; b.textContent = SUBJ[k].name; b.dataset.k = k;
-    b.addEventListener("click", () => { picked = picked.includes(k) ? picked.filter(x => x !== k) : picked.concat(k); renderStudy(); });
-    chipsEl.appendChild(b);
-  });
-  function renderStudy(){
-    store.set("mk_study", picked); store.set("mk_studyhrs", hrsEl.value);
-    chipsEl.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", picked.includes(c.dataset.k)));
-    const hrs = parseFloat(hrsEl.value);
-    document.getElementById("studyHrsO").textContent = hrs + " hrs";
-    const out = document.getElementById("studyOut");
-    if(!picked.length){ out.innerHTML = '<p class="fine">Pick at least one subject above to see your plan.</p>'; return; }
-    const total = picked.reduce((t,k) => t + SUBJ[k].weight, 0);
-    out.innerHTML = picked.map(k => {
-      const sb = SUBJ[k], h = Math.max(0.5, Math.round(hrs * sb.weight / total * 2) / 2);
-      return `<div class="subj" style="--accent:${sb.color}"><h3>${sb.name}</h3><div class="hrs">About ${h} hr${h === 1 ? "" : "s"} a week</div><ol>${sb.steps.map(x => `<li>${x}</li>`).join("")}</ol><div class="done">${sb.done}</div></div>`;
-    }).join("");
-  }
-  hrsEl.addEventListener("input", renderStudy);
-  document.getElementById("useCheck").addEventListener("click", () => {
-    const v = [...document.querySelectorAll(".rd")].map(r => r.checked);
-    const map = [["math",0],["math",1],["writing",2],["reading",3],["sci",4],["habits",5]];
-    const need = [...new Set(map.filter(([k,i]) => !v[i]).map(([k]) => k))];
-    picked = need.length ? need : ["math"];
-    renderStudy();
-  });
-  renderStudy();
-
-  // ---------- readiness check ----------
-  const rds = document.querySelectorAll(".rd");
-  const rdSaved = store.get("mk_ready", []);
-  rds.forEach((r,i) => { r.checked = !!rdSaved[i]; r.addEventListener("change", readyMsg); });
-  function readyMsg(){
-    const vals = [...rds].map(r => r.checked); store.set("mk_ready", vals);
-    const n = vals.filter(Boolean).length;
-    const out = document.getElementById("readyOut");
-    if(n === 0) out.textContent = "";
-    else if(n <= 2) out.textContent = "Some gaps to fill, which is totally normal. A few months of focused prep before college placement tests would help a lot. Your study plan below shows where to start.";
-    else if(n <= 4) out.textContent = "You're partway there. A GED Ready practice test would show exactly which subjects need work.";
-    else out.textContent = "Looking solid. Try a practice placement test to confirm, then look seriously at CCP.";
-  }
-  readyMsg();
-
-  // ---------- plan checklist ----------
-  const TODO = [
-    ["Get your homeschool acknowledgment letter", "From your school district superintendent's office. Kent needs it with your application."],
-    ["Build your typed transcript", "Grades 9–12 courses and grades, homeschool name and address, date, and a parent's signature"],
-    ["Call Kent State Trumbull admissions", "Have them look over your transcript, and ask about the 2.5 GPA scholarship. 330-847-0571"],
-    ["Apply to Trumbull by May 1", "That's the deadline to be automatically considered for Trumbull's freshman scholarships"],
-    ["Ask about College Credit Plus for homeschoolers", "Note the April 1 letter-of-intent deadline and the separate state funding application"],
-    ["Talk to the high school athletic director", "Ask how homeschoolers join softball and what paperwork is needed"],
-    ["Take a GED Ready practice test", "Just a checkup. No withdrawing required."],
-    ["Start your study plan", "Pick your subjects in the Study plan section and put the time on your calendar"],
-    ["Email MCLS@kent.edu about ASL placement", "You may be able to earn college credit for the ASL you already know"],
-    ["Fill out the FAFSA", "With your family's income you should get the full Pell Grant, $7,395 a year. File early, since some state aid has deadlines."],
-    ["Tour Kent State Trumbull", "Sit in on a business class if they allow it"],
-    ["Visit or call two cosmetology schools", "Ask total cost, Pell eligibility, schedule, and job placement rate"],
-    ["Ask if the local career-tech center takes homeschoolers for cosmetology", "Some let high schoolers finish their 1,500 hours before graduating"],
-    ["Shadow someone", "A stylist for a day and a project coordinator for a day"],
-    ["Look up real job posts near Warren", "Plug real pay into the Money section"]
-  ];
-  const tsaved = store.get("mk_todo2", []);
-  const todo = document.getElementById("todo");
-  TODO.forEach((t,i) => {
-    const l = document.createElement("label");
-    l.innerHTML = `<input type="checkbox"><span>${t[0]}<small>${t[1]}</small></span>`;
-    const cb = l.querySelector("input"); cb.checked = !!tsaved[i];
-    cb.addEventListener("change", () => { const arr = [...todo.querySelectorAll("input")].map(c => c.checked); store.set("mk_todo2", arr); });
-    todo.appendChild(l);
-  });
-
-  // ---------- notes ----------
-  const notes = document.getElementById("notes");
-  notes.value = store.get("mk_notes", "");
-  let tm;
-  notes.addEventListener("input", () => { clearTimeout(tm); tm = setTimeout(() => { store.set("mk_notes", notes.value); document.getElementById("savedMsg").textContent = "Saved on this device"; }, 400); });
-})();
-</script>
-</body>
-</html>
+.picks{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.pick{border:2px solid var(--ink);background:transparent;border-radius:999px;padding:8px 14px;font-weight:600;cursor:pointer;font-size:15px}
+.pick:hover{background:var(--chip)}
+.cmp{display:grid;grid-template-columns:1fr 1fr;column-gap:14px}
+.head{position:sticky;top:var(--navh,58px);z-index:5;background:var(--bg);padding:10px 0 12px;display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:end;border-bottom:1px solid var(--line)}
+.colhead{text-align:center}
+.emoji{font-size:clamp(40px,10vw,64px);line-height:1;display:block;margin-bottom:6px}
+.colhead select{width:100%;font:inherit;font-weight:600;font-size:15px;color:var(--ink);background:var(--surface);border:2px solid var(--ink);border-radius:12px;padding:8px 10px;cursor:pointer}
+.colhead .nm{display:block;font-size:clamp(18px,4.4vw,26px);font-weight:800;line-height:1.1;margin:8px 0 2px}
+.colhead .dg{display:block;font-size:13px;color:var(--muted)}
+.colhead .mt{display:inline-block;margin-top:6px;font-size:13px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--accent);color:#fff}
+.head.compact{padding:8px 0}
+.head.compact .emoji,.head.compact .nm,.head.compact .dg,.head.compact .mt{display:none}
+.head.compact .swap{margin-bottom:0}
+.swap{border:0;background:var(--chip);border-radius:999px;width:40px;height:40px;cursor:pointer;font-size:18px;margin-bottom:28px}
+.row{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;column-gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.row .lbl{grid-column:1 / -1;text-align:center;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:10px}
+.row .cell{font-size:15px;line-height:1.45;text-align:center}
+.row .cell b{display:block;font-size:clamp(17px,4vw,22px);line-height:1.2;margin-bottom:2px}
+.row .cell ul{list-style:none;padding:0;margin:0}.row .cell li{margin-bottom:6px}
+.row .muted{color:var(--muted)}
+.foot{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.foot .btn{text-align:center}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .colhead .mt{color:#16112B}}
+:root[data-theme="dark"] .colhead .mt{color:#16112B}
+</style></head>
+<body><nav class="top" aria-label="Site"><div class="inner"><a href="index.html">Home</a><a href="quiz.html">Find your major</a><a href="majors.html">All majors</a><a href="compare.html" aria-current="page">Cosmo vs college</a></div></nav><main><header class="hero" style="padding-bottom:4px"><p class="hey">Compare</p><h1>Pick two. See them side by side.</h1>
+<p class="lede">Choose any two paths, and every row lines up so you can compare them at a glance.</p></header>
+<div class="picks" role="group" aria-label="Quick picks">
+ <button class="pick" data-a="it-bsit" data-b="cosmo">IT vs. cosmo</button>
+ <button class="pick" data-a="business-bba" data-b="cosmo">Business vs. cosmo</button>
+ <button class="pick" id="rand">🎲 Random degree vs. cosmo</button>
+ <button class="pick" id="mytop">My top match vs. cosmo</button>
+</div>
+<div class="head">
+ <div class="colhead" id="hA"></div>
+ <button class="swap" id="swap" aria-label="Swap sides" title="Swap">⇄</button>
+ <div class="colhead" id="hB"></div>
+</div>
+<div class="cmp" id="rows"></div>
+<div class="foot" id="foot"></div>
+<div class="note" style="margin-top:22px"><p>Want the deep dive? <a href="guide.html">Your full guide</a> has the money-over-time chart, how to get in with your homeschool transcript, your study plan, softball, and your checklist.</p></div></main>
+<footer><p>Made for McKenzie. Program details come from Kent State's Trumbull degrees page and program pages, fall 2026. Programs change, so confirm with a Trumbull advisor: 330-675-8860.</p></footer>
+<script>const I=[{"id": "cosmo", "name": "Cosmetology", "deg": "State license (not a degree)", "emoji": "\ud83d\udc87\u200d\u2640\ufe0f", "color": "pink", "time": "10\u201314 months full-time", "where": "Raphael's School of Beauty Culture, Niles (about 10 minutes from Warren)", "before": "$16,500 tuition, plus about $2,000 for kit and books", "after": "About $6,200 out of pocket. Pell covers about 1\u2154 years' worth, roughly $12,300.", "what": "Hair, color, nails, and skin care, then the Ohio state board exam for your license.", "like": ["You want to start earning in about a year", "You love hands-on, creative work with people"], "jobs": ["Hair stylist", "Colorist or extension specialist", "Salon owner later"], "start": "New stylists near Warren: about $11\u201320/hr plus tips. Cleveland: about $15\u201325/hr plus tips.", "later": "Youngstown-area median $13.34/hr before tips (2022). National median $35,790/yr.", "heads": "Raphael's may not accept a parent-made homeschool diploma. Building a client list takes years.", "fits": "Calm under pressure and great with people. ASL lets you serve Deaf clients other salons can't.", "life": "No school teams. Community rec leagues on your own time.", "url": "guide.html#paths", "urlLabel": "More in your guide"}, {"id": "business-bba", "name": "Business Management", "deg": "Bachelor's (B.B.A.)", "emoji": "\ud83d\udcca", "color": "sky", "time": "About 4 years (120 credits)", "where": "In person at Trumbull", "before": "About $33,400 tuition full-time", "after": "About $0 in tuition with max Pell ($7,395/yr), SEOG ($500/yr), and Trumbull's $1,000 scholarship (2.5+ GPA). Books are extra.", "what": "How organizations run: managing people, projects, money, and plans. Includes strategic project management, leadership, HR, and a hands-on consulting practicum.", "like": ["You're the one who organizes the group and hands out jobs", "You stay calm when plans fall apart"], "jobs": ["Project coordinator (entry level)", "Operations or office manager", "HR or recruiting assistant"], "start": "Project coordinator (entry level): Ohio average about $23/hr", "later": "Project management specialist (with experience): $100,750 national median, all experience levels", "payq": "https://www.indeed.com/jobs?q=project+coordinator&l=Warren%2C+OH&radius=50", "payLabel": "project coordinator", "heads": "Needs a C or better in Algebra for Calculus, so math prep matters", "fits": "Your analyzing, delegating, and staying calm under pressure are basically the job description. ASL is a plus in HR and customer-facing roles.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-business-bba.html", "urlLabel": "Full details"}, {"id": "it-bsit", "name": "Information Technology", "deg": "Bachelor's (B.S.I.T.)", "emoji": "\ud83d\udcbb", "color": "mint", "time": "About 4 years (120 credits)", "where": "Fully online", "before": "Priced separately as an online program. Ask financial aid.", "after": "Pell and other grants still apply. Ask for the exact number.", "what": "Hands-on tech for real workplaces: networks, security, databases, websites, cloud, and IT support. Includes a project management course and eight concentrations to choose from.", "like": ["You're the one who fixes everyone's phone or Wi-Fi", "You like figuring out why something broke"], "jobs": ["IT help desk / support", "Systems or network administrator", "Database administrator"], "start": "IT help desk / support: $15\u201322/hr near Warren", "later": "Systems or network administrator: $96,800 national median, all experience levels Database administrator: $104,620 national median, all experience levels", "payq": "https://www.indeed.com/jobs?q=IT+help+desk&l=Warren%2C+OH&radius=50", "payLabel": "IT help desk", "heads": "Fully online takes real self-discipline", "fits": "The \"Integrated IT\" concentration leads toward IT project management, where your organizing skills fit right in.", "life": "Online, so you'd seek out Trumbull clubs and rec sports on purpose.", "url": "major-it-bsit.html", "urlLabel": "Full details"}, {"id": "comm-ba", "name": "Communication Studies", "deg": "Bachelor's (B.A.)", "emoji": "\ud83c\udfa4", "color": "pink", "time": "About 4 years (120 credits)", "where": "Applied Communication concentration at Trumbull, or fully online", "before": "About $33,400 tuition full-time", "after": "About $0 in tuition with max Pell ($7,395/yr), SEOG ($500/yr), and Trumbull's $1,000 scholarship (2.5+ GPA). Books are extra.", "what": "Learning to communicate in every setting: presentations, social media, professional writing, visual design, and running campaigns. Very flexible, with lots of electives.", "like": ["You're good at explaining things and reading a room", "You like social media, events, or making things look good"], "jobs": ["Event planner", "Marketing or social media specialist", "Corporate trainer or HR"], "start": "", "later": "Event planner: $59,440 national median Marketing or social media specialist: $76,950 national median", "payq": "https://www.indeed.com/jobs?q=marketing+coordinator&l=Warren%2C+OH&radius=50", "payLabel": "marketing coordinator", "heads": "Because it's flexible, you need internships to show what you can do", "fits": "Your ASL is a communication skill employers rarely see. Pair this with business electives and you'd be a strong coordinator or HR candidate.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-comm-ba.html", "urlLabel": "Full details"}, {"id": "crim-ba", "name": "Criminology & Justice Studies", "deg": "Bachelor's (B.A.)", "emoji": "\u2696\ufe0f", "color": "sky", "time": "About 4 years (120 credits)", "where": "Trumbull", "before": "About $33,400 tuition full-time", "after": "About $0 in tuition with max Pell ($7,395/yr), SEOG ($500/yr), and Trumbull's $1,000 scholarship (2.5+ GPA). Books are extra.", "what": "Why crime happens and how the justice system responds: policing, courts, corrections, and victim services.", "like": ["You like true crime or figuring out why people do things", "You want work that protects people"], "jobs": ["Probation or parole officer", "Victim advocate", "Police officer (with academy training)"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=probation+officer&l=Warren%2C+OH&radius=50", "payLabel": "probation officer", "heads": "Many jobs require background checks and some require physical tests", "fits": "Calm under pressure matters a lot here. ASL is valuable in courts and policing, where Deaf people often aren't served well.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-crim-ba.html", "urlLabel": "Full details"}, {"id": "english-ba", "name": "English", "deg": "Bachelor's (B.A.)", "emoji": "\ud83d\udcda", "color": "pink", "time": "About 4 years (120 credits)", "where": "Trumbull", "before": "About $33,400 tuition full-time", "after": "About $0 in tuition with max Pell ($7,395/yr), SEOG ($500/yr), and Trumbull's $1,000 scholarship (2.5+ GPA). Books are extra.", "what": "Reading, writing, and analyzing everything from novels to professional documents. Builds strong writing and thinking skills.", "like": ["You love reading or writing", "You notice how words change how people feel"], "jobs": ["Content or technical writer", "Editor or communications assistant", "Teacher (needs a license program)"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=content+writer&l=Warren%2C+OH&radius=50", "payLabel": "content writer", "heads": "You'll need a clear plan (teaching, writing, law) since the degree is broad", "fits": "If writing is a weak spot right now, this might not be your first pick. If you grow to love it, it pairs well with business or communication.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-english-ba.html", "urlLabel": "Full details"}, {"id": "bis", "name": "Integrative Studies", "deg": "Bachelor's (B.I.S.)", "emoji": "\ud83e\udde9", "color": "butter", "time": "About 4 years (120 credits)", "where": "Trumbull", "before": "About $33,400 tuition full-time", "after": "About $0 in tuition with max Pell ($7,395/yr), SEOG ($500/yr), and Trumbull's $1,000 scholarship (2.5+ GPA). Books are extra.", "what": "A build-your-own degree. You combine courses from different areas around the career you want, with an advisor's help.", "like": ["No single major feels exactly right", "You have a specific mix in mind, like ASL plus business"], "jobs": ["Depends on what you combine", "Example: ASL + business for accessibility or HR roles", "Example: psychology + communication for social services"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=program+coordinator&l=Warren%2C+OH&radius=50", "payLabel": "program coordinator", "heads": "You have to be clear about your goal so the degree tells a story to employers", "fits": "This is the most natural home for your ASL plus your organizing skills. Ask an advisor what an \"ASL + business\" plan could look like.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-bis.html", "urlLabel": "Full details"}, {"id": "nursing", "name": "Nursing", "deg": "Bachelor's (B.S.N.)", "emoji": "\ud83e\ude7a", "color": "mint", "time": "About 4 years (120 credits)", "where": "Trumbull (check admission details)", "before": "About $33,400 tuition full-time", "after": "About $0 in tuition with max Pell ($7,395/yr), SEOG ($500/yr), and Trumbull's $1,000 scholarship (2.5+ GPA). Books are extra.", "what": "Training to become a registered nurse: anatomy, patient care, medications, and lots of hands-on clinical hours in hospitals.", "like": ["You want to help people in a very direct way", "You stay calm when things get intense"], "jobs": ["Registered nurse", "Later: specialty nursing, school nurse, nurse educator"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=registered+nurse&l=Warren%2C+OH&radius=50", "payLabel": "registered nurse", "heads": "Admission to nursing programs is usually selective, so grades in science and math matter a lot", "fits": "Calm under pressure is huge in nursing. ASL is valuable in hospitals, where communicating with Deaf patients is a real need.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-nursing.html", "urlLabel": "Full details"}, {"id": "psych-ba", "name": "Psychology", "deg": "Bachelor's (B.A.)", "emoji": "\ud83e\udde0", "color": "pink", "time": "About 4 years (120 credits)", "where": "Trumbull", "before": "About $33,400 tuition full-time", "after": "About $0 in tuition with max Pell ($7,395/yr), SEOG ($500/yr), and Trumbull's $1,000 scholarship (2.5+ GPA). Books are extra.", "what": "How people think, feel, and behave, including child, social, and abnormal psychology, and how research works.", "like": ["Friends come to you for advice", "You're curious why people act the way they do"], "jobs": ["Case manager or human services assistant", "HR or recruiting", "Behavior technician"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=case+manager&l=Warren%2C+OH&radius=50", "payLabel": "case manager", "heads": "Many psychology careers (counselor, therapist, psychologist) need a master's degree or more", "fits": "Understanding people pairs well with your calm, organized side. With ASL, you could work in Deaf services or mental health.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-psych-ba.html", "urlLabel": "Full details"}, {"id": "btas", "name": "Technical & Applied Studies", "deg": "Bachelor's (B.T.A.S.)", "emoji": "\ud83d\udee0\ufe0f", "color": "butter", "time": "About 4 years (120 credits)", "where": "Trumbull", "before": "About $33,400 tuition full-time", "after": "About $0 in tuition with max Pell ($7,395/yr), SEOG ($500/yr), and Trumbull's $1,000 scholarship (2.5+ GPA). Books are extra.", "what": "A bachelor's that builds on technical training or an associate degree. Good for turning a 2-year degree into a 4-year one.", "like": ["You'd rather start with a 2-year degree and decide later", "You have technical credits you want to count"], "jobs": ["Supervisor or team lead in your technical field", "Operations roles"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=operations+supervisor&l=Warren%2C+OH&radius=50", "payLabel": "operations supervisor", "heads": "Works best if you already have an associate degree or technical credits", "fits": "A smart \"start small\" plan: do a 2-year degree, start working, then finish a bachelor's here.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-btas.html", "urlLabel": "Full details"}, {"id": "theatre-ba", "name": "Theatre Studies", "deg": "Bachelor's (B.A.)", "emoji": "\ud83c\udfad", "color": "pink", "time": "About 4 years (120 credits)", "where": "Trumbull (Kent Trumbull Theatre)", "before": "About $33,400 tuition full-time", "after": "About $0 in tuition with max Pell ($7,395/yr), SEOG ($500/yr), and Trumbull's $1,000 scholarship (2.5+ GPA). Books are extra.", "what": "Acting, directing, design, and the behind-the-scenes work of putting on shows, including costumes, makeup, and stage management.", "like": ["You love performing or the backstage side", "You're into hair, makeup, or costume design"], "jobs": ["Stage manager", "Hair and makeup for theatre or events", "Event or arts coordinator"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=stage+manager&l=Warren%2C+OH&radius=50", "payLabel": "stage manager", "heads": "Steady theatre jobs are hard to find, so many people pair this with another skill", "fits": "If you love the cosmetology side, theatre hair and makeup is a creative outlet for it. Stage management is basically project management.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-theatre-ba.html", "urlLabel": "Full details"}, {"id": "acct-aab", "name": "Accounting", "deg": "Associate (A.A.B.)", "emoji": "\ud83e\uddee", "color": "sky", "time": "About 2 years (about 60 credits)", "where": "Trumbull", "before": "About $15,700 tuition full-time", "after": "About $0 in tuition with max Pell, SEOG, and Trumbull's 2.5 GPA scholarship. Books are extra.", "what": "Bookkeeping, payroll, taxes, and financial records, the money side of every business.", "like": ["You like when numbers add up", "You're detail-oriented"], "jobs": ["Bookkeeper", "Accounts payable or payroll clerk", "Accounting assistant"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=bookkeeper&l=Warren%2C+OH&radius=50", "payLabel": "bookkeeper", "heads": "Becoming a CPA later needs a bachelor's and more", "fits": "A fast route to an office job. Many credits can carry into a business bachelor's later, so ask an advisor.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-acct-aab.html", "urlLabel": "Full details"}, {"id": "bman-aab", "name": "Business Management", "deg": "Associate (A.A.B.)", "emoji": "\ud83d\udccb", "color": "sky", "time": "About 2 years (about 60 credits)", "where": "Trumbull", "before": "About $15,700 tuition full-time", "after": "About $0 in tuition with max Pell, SEOG, and Trumbull's 2.5 GPA scholarship. Books are extra.", "what": "The 2-year version of business: management, marketing, accounting basics, and supervision.", "like": ["You want to start working sooner", "You're a natural organizer"], "jobs": ["Assistant manager or shift supervisor", "Office or operations assistant", "Customer service lead"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=assistant+manager&l=Warren%2C+OH&radius=50", "payLabel": "assistant manager", "heads": "Some manager jobs prefer a bachelor's, so plan to keep going if you want to move up", "fits": "Your delegating and calm-under-pressure skills fit here. You could work full-time and finish the bachelor's part-time.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-bman-aab.html", "urlLabel": "Full details"}, {"id": "cyber-aab", "name": "Cybersecurity", "deg": "Associate (A.A.B.)", "emoji": "\ud83d\udd10", "color": "mint", "time": "About 2 years (about 60 credits)", "where": "Trumbull", "before": "About $15,700 tuition full-time", "after": "About $0 in tuition with max Pell, SEOG, and Trumbull's 2.5 GPA scholarship. Books are extra.", "what": "Protecting computers and networks from hackers: security tools, network basics, and how attacks happen.", "like": ["You like puzzles and figuring out how things break", "You think hacking is interesting (the legal kind)"], "jobs": ["IT support with security duties", "Security operations (SOC) assistant", "Help desk to security path"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=cybersecurity+analyst&l=Warren%2C+OH&radius=50", "payLabel": "cybersecurity analyst", "heads": "Most people start in IT support before moving into security", "fits": "Staying calm when something goes wrong is exactly what security incidents need.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-cyber-aab.html", "urlLabel": "Full details"}, {"id": "it-aab", "name": "Information Technology", "deg": "Associate (A.A.B.)", "emoji": "\ud83d\udda5\ufe0f", "color": "mint", "time": "About 2 years (about 60 credits)", "where": "Trumbull", "before": "About $15,700 tuition full-time", "after": "About $0 in tuition with max Pell, SEOG, and Trumbull's 2.5 GPA scholarship. Books are extra.", "what": "The 2-year version of IT: computer support, networks, and software basics.", "like": ["You want a tech job in about two years", "You like helping people with tech problems"], "jobs": ["IT help desk / support", "Computer technician"], "start": "IT help desk / support: $15\u201322/hr near Warren", "later": "", "payq": "https://www.indeed.com/jobs?q=IT+help+desk&l=Warren%2C+OH&radius=50", "payLabel": "IT help desk", "heads": "Pairs well with certifications like CompTIA A+", "fits": "Quick path into IT with the option to keep going toward IT project management.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-it-aab.html", "urlLabel": "Full details"}, {"id": "office-aab", "name": "Office Technology", "deg": "Associate (A.A.B.)", "emoji": "\ud83d\uddc2\ufe0f", "color": "butter", "time": "About 2 years (about 60 credits)", "where": "Trumbull, with an online medical billing option", "before": "About $15,700 tuition full-time", "after": "About $0 in tuition with max Pell, SEOG, and Trumbull's 2.5 GPA scholarship. Books are extra.", "what": "Running a modern office: software, business writing, records, and scheduling. There's a medical billing concentration online.", "like": ["You're organized and like keeping things running smoothly", "You want office work in healthcare or business"], "jobs": ["Administrative assistant", "Medical billing or office specialist", "Office coordinator"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=medical+billing&l=Warren%2C+OH&radius=50", "payLabel": "medical billing", "heads": "Pay starts modest, but it's steady and in demand", "fits": "Organizing and multitasking are your thing. Medical offices value ASL too.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-office-aab.html", "urlLabel": "Full details"}, {"id": "crim-aas", "name": "Criminology & Justice Studies", "deg": "Associate (A.A.S.)", "emoji": "\ud83d\ude93", "color": "sky", "time": "About 2 years (about 60 credits)", "where": "Trumbull, with a Police Academy option", "before": "About $15,700 tuition full-time", "after": "About $0 in tuition with max Pell, SEOG, and Trumbull's 2.5 GPA scholarship. Books are extra.", "what": "The 2-year version of criminal justice. One concentration includes Kent Trumbull's Peace Officer Training Academy.", "like": ["You want to work in law enforcement", "You'd rather get started in about two years"], "jobs": ["Police officer (academy concentration)", "Corrections officer", "Security"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=police+officer&l=Warren%2C+OH&radius=50", "payLabel": "police officer", "heads": "Police work requires background checks, physical tests, and age minimums", "fits": "ASL plus calm under pressure would make you a rare officer.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-crim-aas.html", "urlLabel": "Full details"}, {"id": "eet-aas", "name": "Electrical/Electronic Engineering Technology", "deg": "Associate (A.A.S.)", "emoji": "\u26a1", "color": "mint", "time": "About 2 years (about 60 credits)", "where": "Trumbull", "before": "About $15,700 tuition full-time", "after": "About $0 in tuition with max Pell, SEOG, and Trumbull's 2.5 GPA scholarship. Books are extra.", "what": "Circuits, electronics, and control systems used in factories and equipment. There are also related microcredentials in semiconductors.", "like": ["You like taking things apart and figuring them out", "You want hands-on work, not a desk all day"], "jobs": ["Electronics or electrical technician", "Maintenance or controls technician"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=electronics+technician&l=Warren%2C+OH&radius=50", "payLabel": "electronics technician", "heads": "Uses a good amount of math", "fits": "The Warren area has lots of manufacturing, so these skills are used locally.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-eet-aas.html", "urlLabel": "Full details"}, {"id": "met-aas", "name": "Mechanical Engineering Technology", "deg": "Associate (A.A.S.)", "emoji": "\u2699\ufe0f", "color": "mint", "time": "About 2 years (about 60 credits)", "where": "Trumbull", "before": "About $15,700 tuition full-time", "after": "About $0 in tuition with max Pell, SEOG, and Trumbull's 2.5 GPA scholarship. Books are extra.", "what": "How machines and products are designed and made: drafting, CAD, 3D printing, and manufacturing processes.", "like": ["You like building or designing things", "You'd enjoy 3D printing and CAD"], "jobs": ["CAD drafter", "Manufacturing or quality technician"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=CAD+drafter&l=Warren%2C+OH&radius=50", "payLabel": "CAD drafter", "heads": "Uses a good amount of math", "fits": "A strong local option given the Valley's manufacturing.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-met-aas.html", "urlLabel": "Full details"}, {"id": "vettech-aas", "name": "Veterinary Technology", "deg": "Associate (A.A.S.)", "emoji": "\ud83d\udc3e", "color": "pink", "time": "About 2 years (about 60 credits)", "where": "Trumbull", "before": "About $15,700 tuition full-time", "after": "About $0 in tuition with max Pell, SEOG, and Trumbull's 2.5 GPA scholarship. Books are extra.", "what": "Medical care for animals: assisting vets with exams, lab work, X-rays, anesthesia, and surgery.", "like": ["You love animals", "You're okay with blood and medical stuff"], "jobs": ["Veterinary technician", "Animal hospital or shelter staff"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=veterinary+technician&l=Warren%2C+OH&radius=50", "payLabel": "veterinary technician", "heads": "You'll need to pass a national exam to be credentialed", "fits": "Calm under pressure matters in emergency vet care, and so does helping worried pet owners.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-vettech-aas.html", "urlLabel": "Full details"}, {"id": "aa-as", "name": "Associate of Arts or Science", "deg": "Associate (A.A. / A.S.)", "emoji": "\ud83c\udf93", "color": "butter", "time": "About 2 years (about 60 credits)", "where": "Trumbull", "before": "About $15,700 tuition full-time", "after": "About $0 in tuition with max Pell, SEOG, and Trumbull's 2.5 GPA scholarship. Books are extra.", "what": "Two years of general college classes that count toward almost any bachelor's. A good \"I'm not sure yet\" option.", "like": ["You're not sure what to major in yet", "You want a degree in hand after two years either way"], "jobs": ["Mostly a stepping stone to a bachelor's"], "start": "", "later": "", "payq": "https://www.indeed.com/jobs?q=office+assistant&l=Warren%2C+OH&radius=50", "payLabel": "office assistant", "heads": "On its own it doesn't lead to a specific job, so treat it as step one", "fits": "Lets you try classes in business, psychology, ASL, and more before committing.", "life": "Trumbull campus rec and clubs. Not tournament-level, but a real outlet.", "url": "major-aa-as.html", "urlLabel": "Full details"}];
+const COL={sky:"var(--sky)",mint:"var(--mint)",pink:"var(--pink)",butter:"var(--butter)"};
+const byId=Object.fromEntries(I.map(x=>[x.id,x]));
+let m={};try{m=JSON.parse(localStorage.getItem("mk_matches")||"{}")}catch(e){}
+const qs=new URLSearchParams(location.search);
+let A=byId[qs.get("a")]?qs.get("a"):"it-bsit", Bv=byId[qs.get("b")]?qs.get("b"):"cosmo";
+const opts=sel=>`<optgroup label="Not at Kent">${I.filter(x=>x.id==="cosmo").map(x=>`<option value="${x.id}"${x.id===sel?" selected":""}>${x.name}</option>`).join("")}</optgroup>`+
+ `<optgroup label="Trumbull bachelor's (4 years)">${I.filter(x=>x.deg.startsWith("Bachelor")).map(x=>`<option value="${x.id}"${x.id===sel?" selected":""}>${x.name}</option>`).join("")}</optgroup>`+
+ `<optgroup label="Trumbull associate (2 years)">${I.filter(x=>x.deg.startsWith("Associate")).map(x=>`<option value="${x.id}"${x.id===sel?" selected":""}>${x.name}</option>`).join("")}</optgroup>`;
+function head(x,side){
+  const mt=m[x.id]!==undefined?`<span class="mt" style="--accent:${COL[x.color]}">Your match ${m[x.id]}%</span>`:"";
+  return `<span class="emoji" aria-hidden="true">${x.emoji}</span><label class="sr" for="sel${side}" style="position:absolute;left:-9999px">Choose path ${side}</label><select id="sel${side}">${opts(x.id)}</select><span class="nm">${x.name}</span><span class="dg">${x.deg}</span>${mt}`;
+}
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+function pay(x,which){
+  if(which==="start"){ if(x.start) return esc(x.start); return `<span class="muted">No verified local number yet.</span> <a href="${x.payq}" target="_blank" rel="noopener">See ${esc(x.payLabel)} posts near Warren</a>`;}
+  return x.later?esc(x.later):`<span class="muted">Not listed here.</span> <a href="${x.url}">See jobs</a>`;
+}
+const ROWS=[
+ ["Time to finish",x=>`<b>${esc(x.time)}</b>`],
+ ["Where",x=>esc(x.where)],
+ ["Cost before aid",x=>`<b>${esc(x.before)}</b>`],
+ ["After your aid (estimate)",x=>esc(x.after)],
+ ["What you'd learn",x=>esc(x.what)],
+ ["You might like it if…",x=>`<ul>${x.like.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>`],
+ ["Jobs it leads to",x=>`<ul>${x.jobs.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>`],
+ ["Starting pay",x=>pay(x,"start")],
+ ["Pay later on",x=>pay(x,"later")],
+ ["Heads up",x=>esc(x.heads)],
+ ["How it fits you",x=>esc(x.fits)],
+ ["Softball & campus life",x=>esc(x.life)],
+];
+function render(){
+  const a=byId[A],b=byId[Bv];
+  document.getElementById("hA").innerHTML=head(a,"A");
+  document.getElementById("hB").innerHTML=head(b,"B");
+  document.getElementById("rows").innerHTML=ROWS.map(([l,f])=>`<div class="row"><div class="lbl">${l}</div><div class="cell">${f(a)}</div><div class="cell">${f(b)}</div></div>`).join("");
+  document.getElementById("foot").innerHTML=`<a class="btn ghost" href="${a.url}">${a.urlLabel}: ${esc(a.name)}</a><a class="btn ghost" href="${b.url}">${b.urlLabel}: ${esc(b.name)}</a>`;
+  document.getElementById("selA").addEventListener("change",e=>{A=e.target.value;render();});
+  document.getElementById("selB").addEventListener("change",e=>{Bv=e.target.value;render();});
+  history.replaceState(null,"",`?a=${A}&b=${Bv}`);
+}
+document.getElementById("swap").addEventListener("click",()=>{[A,Bv]=[Bv,A];render();});
+document.querySelectorAll(".pick[data-a]").forEach(b=>b.addEventListener("click",()=>{A=b.dataset.a;Bv=b.dataset.b;render();}));
+document.getElementById("rand").addEventListener("click",()=>{const d=I.filter(x=>x.id!=="cosmo"&&x.id!==A);A=d[Math.floor(Math.random()*d.length)].id;Bv="cosmo";render();});
+const topId=Object.keys(m).sort((x,y)=>m[y]-m[x])[0];
+const mt=document.getElementById("mytop");
+if(topId&&byId[topId]){mt.addEventListener("click",()=>{A=topId;Bv="cosmo";render();});}else{mt.textContent="Take the quiz to unlock your top match";mt.addEventListener("click",()=>location.href="quiz.html");}
+render();
+const nav=document.querySelector("nav.top"),hd=document.querySelector(".head");
+const setNav=()=>document.documentElement.style.setProperty("--navh",nav.getBoundingClientRect().height+"px");setNav();addEventListener("resize",setNav);
+const startY=hd.getBoundingClientRect().top+scrollY;
+addEventListener("scroll",()=>{hd.classList.toggle("compact",scrollY>startY+40);},{passive:true});</script></body></html>
